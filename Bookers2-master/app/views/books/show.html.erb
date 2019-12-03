@@ -1,0 +1,89 @@
+<p id="notice"></p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="row">
+                <div class="col-xs-3">
+                    <h2>user info</h2>
+                    <%= attachment_image_tag @bookuser, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <th>
+                                <p>name</p>
+                                <h5 class="profile_name"><%= @bookuser.name %></h5>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                <p>introduction</p>
+                                <h5 class="profile_introduction"><%= @bookuser.introduction %></h5>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="col text-center">
+                        <%= link_to edit_user_path(@bookuser.id) do %>
+                            <i class="fas fa-wrench"></i>
+                    </div>
+                        <% end %>
+                </div>
+                <div class="col-xs-3">
+                    <h2>New book</h2>
+                    <% if flash[:notice] %>
+                        <p><%= flash[:notice] %></p>
+                    <% end %>
+                    <%= form_for @book do |book| %>
+                        <% if @book.errors.any? %>
+                            <%= @book.errors.count %>件のerrorが発生しました
+                            <% @book.errors.full_messages.each do |message| %>
+                                <li><%= message %></li>
+                            <% end %>
+                    <% end %>
+                        <h4>Title</h4>
+                        <%= book.text_field :title %>
+
+                        <h4>Opinion</h4>
+                        <%= book.text_area :body %>
+                        <div class="col-text-center">
+                            <%= book.submit "create book", class: "btn btn-block btn-primary" %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <h1>Book detail</h1>
+            <table class="table table-striped">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        <%= attachment_image_tag @bookuser, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+                        </br>
+                        <%= link_to @book.user.name, user_path(@book.user)%>
+                        </td>
+                        <td>
+                        <%= @book.title %>
+                        </td>
+                        <td>
+                        <%= @book.body %>
+                        </td>
+                        <td>
+                        <% if @book.user == current_user %>
+                            <%= link_to "edit", edit_book_path(@book.id), class:"btn-success" %>
+                            <%= link_to "destroy", book_path(@book.id), class:"btn-danger", method: :delete, "data-confirm" => "Are you sure?" %>
+                        <% end %>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

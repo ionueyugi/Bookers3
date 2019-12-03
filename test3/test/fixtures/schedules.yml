@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  evaluation_id: 1
+  user: 1
+  day: 2019-12-03
+  schedule_title: MyString
+  start_time: 2019-12-03 10:38:25
+  finish_time: 2019-12-03 10:38:25
+  schedule_details: MyText
+
+two:
+  evaluation_id: 1
+  user: 1
+  day: 2019-12-03
+  schedule_title: MyString
+  start_time: 2019-12-03 10:38:25
+  finish_time: 2019-12-03 10:38:25
+  schedule_details: MyText

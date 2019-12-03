@@ -1,0 +1,52 @@
+<div class="body-wrap">
+  <div id="st-container" class="st-container">
+    <div class="st-pusher">
+      <div class="st-content">
+        <div class="st-content-inner">
+          <section class="slice slice-lg sct-color-1">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                  <div class="form-user style-1 rounded has-shadow-1"> 
+                    <div class="form-header text-center">
+                      <h2 class="form-header-title">User info</h2>
+                    </div>
+                    <% if flash[:notice] %>
+                      <p><%= flash[:notice] %></p>
+                  　<% end %>
+                    <%= form_for @user do |f| %>
+                      <% if @user.errors.any? %>
+                      <%= @user.errors.count %>件のerrorが発生しました
+                        <% @user.errors.full_messages.each do |message| %>
+                          <li><%= message %></li>
+                        <% end %>
+                      <% end %>
+                        <div class="form-group has-icon">
+                        <h4>name</h4>
+                          <label class="control-label sr-only" for="inputEmail">Name</label>
+                            <%= f.text_field :name, autofocus: true, class:"form-control", id:"inputEmail", placeholder:"名前"%>
+                        </div>
+                        <div class="form-group has-icon">
+                          <div class="user-edit-image">
+                            <%= attachment_image_tag @user, :profile_image, :fill, 30, 30,class:"img_cricle pull-left profile-thumb",fallback:  "no_image.jpg" %>
+                          </div>
+                          <label class="control-label sr-only" for="inputEmail">Profileimage</label>
+                            <%= f.attachment_field :profile_image, placeholder:"プロフィール画像",class: "user-edit-form"%>
+                        </div>
+                        <div class="form-group has-icon">
+                          <h4>introduction</h4>
+                          <label class="control-label sr-only" for="inputEmail">introduction</label>
+                          <%= f.text_field :introduction, autofocus: true, class:"form-control", id:"inputEmail", placeholder:"introduction"%>
+                          </br>
+                          <%= f.submit "Update Book", class:"btn btn-block btn-primary" %>
+                        </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+  </div>
+</div>

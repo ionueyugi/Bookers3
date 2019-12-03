@@ -1,0 +1,3174 @@
+Last login: Tue Oct 15 19:58:57 on ttys000
+inoueyuuginoMacBook-Pro:~ inoueyuugi$ cd Desuktop
+-bash: cd: Desuktop: No such file or directory
+inoueyuuginoMacBook-Pro:~ inoueyuugi$ cd Desktop
+inoueyuuginoMacBook-Pro:Desktop inoueyuugi$ cd /work
+-bash: cd: /work: No such file or directory
+inoueyuuginoMacBook-Pro:Desktop inoueyuugi$ cd work
+inoueyuuginoMacBook-Pro:work inoueyuugi$ cd vagrant
+inoueyuuginoMacBook-Pro:vagrant inoueyuugi$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/bionic64' version '20191003.0.0' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Vagrant has detected a configuration issue which exposes a
+==> default: vulnerability with the installed version of VirtualBox. The
+==> default: current guest is configured to use an E1000 NIC type for a
+==> default: network adapter which is vulnerable in this version of VirtualBox.
+==> default: Ensure the guest is trusted to use this configuration or update
+==> default: the NIC type using one of the methods below:
+==> default: 
+==> default:   https://www.vagrantup.com/docs/virtualbox/configuration.html#default-nic-type
+==> default:   https://www.vagrantup.com/docs/virtualbox/networking.html#virtualbox-nic-type
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 3000 (guest) => 3000 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection reset. Retrying...
+    default: Warning: Remote connection disconnect. Retrying...
+==> default: Machine booted and ready!
+[default] GuestAdditions 5.2.20 running --- OK.
+==> default: Checking for guest additions in VM...
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /vagrant => /Users/inoueyuugi/Desktop/work/vagrant
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+inoueyuuginoMacBook-Pro:vagrant inoueyuugi$ vagrant ssh
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-65-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Oct 16 05:24:20 UTC 2019
+
+  System load:  0.24              Processes:             100
+  Usage of /:   19.5% of 9.63GB   Users logged in:       0
+  Memory usage: 12%               IP address for enp0s3: 10.0.2.15
+  Swap usage:   0%                IP address for enp0s8: 192.168.33.10
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+13 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Wed Oct 16 05:10:33 2019 from 10.0.2.2
+vagrant@ubuntu-bionic:~$ cd /vagrant
+vagrant@ubuntu-bionic:/vagrant$ rails new meshiterro
+      create  
+      create  README.md
+      create  Rakefile
+      create  .ruby-version
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+         run  git init from "."
+Initialized empty Git repository in /vagrant/meshiterro/.git/
+      create  package.json
+      create  app
+      create  app/assets/config/manifest.js
+      create  app/assets/javascripts/application.js
+      create  app/assets/javascripts/cable.js
+      create  app/assets/stylesheets/application.css
+      create  app/channels/application_cable/channel.rb
+      create  app/channels/application_cable/connection.rb
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/jobs/application_job.rb
+      create  app/mailers/application_mailer.rb
+      create  app/models/application_record.rb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/mailer.html.erb
+      create  app/views/layouts/mailer.text.erb
+      create  app/assets/images/.keep
+      create  app/assets/javascripts/channels
+      create  app/assets/javascripts/channels/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  bin/update
+      create  bin/yarn
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/cable.yml
+      create  config/puma.rb
+      create  config/spring.rb
+      create  config/storage.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/application_controller_renderer.rb
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/content_security_policy.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/cors.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/new_framework_defaults_5_2.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/master.key
+      append  .gitignore
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/apple-touch-icon-precomposed.png
+      create  public/apple-touch-icon.png
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp
+      create  tmp/.keep
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor
+      create  vendor/.keep
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/fixtures/files
+      create  test/fixtures/files/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  test/system
+      create  test/system/.keep
+      create  test/application_system_test_case.rb
+      create  storage
+      create  storage/.keep
+      create  tmp/storage
+      create  tmp/storage/.keep
+      remove  config/initializers/cors.rb
+      remove  config/initializers/new_framework_defaults_5_2.rb
+         run  bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/............
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 13.0.0
+Following files may not be writable, so sudo is needed:
+  /usr/local/bin
+  /var/lib/gems/2.5.0
+  /var/lib/gems/2.5.0/build_info
+  /var/lib/gems/2.5.0/cache
+  /var/lib/gems/2.5.0/doc
+  /var/lib/gems/2.5.0/extensions
+  /var/lib/gems/2.5.0/gems
+  /var/lib/gems/2.5.0/specifications
+Using concurrent-ruby 1.1.5
+Using i18n 1.7.0
+Using minitest 5.12.2
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.3
+Using builder 3.2.3
+Using erubi 1.9.0
+Using mini_portile2 2.4.0
+Using nokogiri 1.10.4
+Using rails-dom-testing 2.0.3
+Using crass 1.0.5
+Using loofah 2.3.0
+Using rails-html-sanitizer 1.3.0
+Using actionview 5.2.3
+Using rack 2.0.7
+Using rack-test 1.1.0
+Using actionpack 5.2.3
+Using nio4r 2.5.2
+Using websocket-extensions 0.1.4
+Using websocket-driver 0.7.1
+Using actioncable 5.2.3
+Using globalid 0.4.2
+Using activejob 5.2.3
+Using mini_mime 1.0.2
+Using mail 2.7.1
+Using actionmailer 5.2.3
+Using activemodel 5.2.3
+Using arel 9.0.0
+Using activerecord 5.2.3
+Using mimemagic 0.3.3
+Using marcel 0.3.3
+Using activestorage 5.2.3
+Using public_suffix 4.0.1
+Using addressable 2.7.0
+Using io-like 0.3.0
+Using archive-zip 0.12.0
+Using bindex 0.8.1
+Using msgpack 1.3.1
+Using bootsnap 1.4.5
+Using bundler 2.0.2
+Using byebug 11.0.1
+Using regexp_parser 1.6.0
+Using xpath 3.2.0
+Using capybara 3.29.0
+Using childprocess 3.0.0
+Using chromedriver-helper 2.1.1
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using coffee-script 2.4.1
+Using method_source 0.9.2
+Using thor 0.20.3
+Using railties 5.2.3
+Using coffee-rails 4.2.2
+Using ffi 1.11.1
+Using jbuilder 2.9.1
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.10.0
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Using puma 3.12.1
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.3
+Using rubyzip 2.0.0
+Using sass-listen 4.0.0
+Using sass 3.7.4
+Using tilt 2.0.10
+Using sass-rails 5.1.0
+Using selenium-webdriver 3.142.6
+Using spring 2.1.0
+Using spring-watcher-listen 2.0.1
+Using sqlite3 1.4.1
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.1
+Using uglifier 4.2.0
+Using web-console 3.7.0
+Bundle complete! 18 Gemfile dependencies, 78 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: Spring inserted
+* bin/rails: Spring inserted
+vagrant@ubuntu-bionic:/vagrant$ cd meshiterro
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/" for 10.0.2.2 at 2019-10-16 05:26:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 05:26:35 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ cd /vagrant
+vagrant@ubuntu-bionic:/vagrant$ cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+cp: cannot stat 'meshiterro_template/app/assets/*': No such file or directory
+vagrant@ubuntu-bionic:/vagrant$ cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+cp: cannot stat 'meshiterro_template/app/assets/*': No such file or directory
+vagrant@ubuntu-bionic:/vagrant$ pwd
+/vagrant
+vagrant@ubuntu-bionic:/vagrant$ cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+cp: cannot stat 'meshiterro_template/app/assets/*': No such file or directory
+vagrant@ubuntu-bionic:/vagrant$ cp -r meshiterro_template2/app/assets/* meshiterro/app/assets/
+cp: cannot stat 'meshiterro_template2/app/assets/*': No such file or directory
+vagrant@ubuntu-bionic:/vagrant$ cp -r meshiterro_template 2/app/assets/* meshiterro/app/assets/
+cp: cannot stat 'meshiterro_template': No such file or directory
+cp: cannot stat '2/app/assets/*': No such file or directory
+vagrant@ubuntu-bionic:/vagrant$  cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+vagrant@ubuntu-bionic:/vagrant$ bundle install
+Could not locate Gemfile
+vagrant@ubuntu-bionic:/vagrant$ cp -r meshiterro_template 2/app/assets/* meshiterro/app/assets/
+cp: cannot stat '2/app/assets/*': No such file or directory
+vagrant@ubuntu-bionic:/vagrant$ bundle install
+Could not locate Gemfile
+vagrant@ubuntu-bionic:/vagrant$ ^C
+vagrant@ubuntu-bionic:/vagrant$ # find / -name Gemfile
+vagrant@ubuntu-bionic:/vagrant$ find / -name Gemfile
+find: ‘/tmp/systemd-private-9ba7ab4e176047a8b9043349d79baebb-systemd-resolved.service-UegOl5’: Permission denied
+find: ‘/tmp/netplan_hwl3onpd’: Permission denied
+find: ‘/sys/kernel/debug’: Permission denied
+find: ‘/sys/fs/pstore’: Permission denied
+find: ‘/sys/fs/fuse/connections/46’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+/var/lib/gems/2.5.0/gems/rspec-parameterized-0.4.2/Gemfile
+/var/lib/gems/2.5.0/gems/sqlite3-1.4.1/Gemfile
+/var/lib/gems/2.5.0/gems/http-accept-1.7.0/Gemfile
+/var/lib/gems/2.5.0/gems/binding_ninja-0.2.3/Gemfile
+/var/lib/gems/2.5.0/gems/domain_name-0.5.20190701/Gemfile
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/Gemfile
+/var/lib/gems/2.5.0/gems/procto-0.0.3/Gemfile
+/var/lib/gems/2.5.0/gems/adamantium-0.2.0/Gemfile
+/var/lib/gems/2.5.0/gems/jbuilder-2.9.1/Gemfile
+/var/lib/gems/2.5.0/gems/rake-13.0.0/Gemfile
+/var/lib/gems/2.5.0/gems/method_source-0.9.2/Gemfile
+/var/lib/gems/2.5.0/gems/bundler-2.0.2/lib/bundler/templates/Gemfile
+/var/lib/gems/2.5.0/gems/bindex-0.8.1/Gemfile
+/var/lib/gems/2.5.0/gems/mini_mime-1.0.2/Gemfile
+/var/lib/gems/2.5.0/gems/proc_to_ast-0.1.0/Gemfile
+/var/lib/gems/2.5.0/gems/bcrypt-3.1.13/Gemfile
+/var/lib/gems/2.5.0/gems/concurrent-ruby-1.1.5/Gemfile
+/var/lib/gems/2.5.0/gems/concord-0.1.5/Gemfile
+/var/lib/gems/2.5.0/gems/equalizer-0.0.11/Gemfile
+/var/lib/gems/2.5.0/gems/rack-protection-2.0.7/Gemfile
+/var/lib/gems/2.5.0/gems/unparser-0.4.5/Gemfile
+/var/lib/gems/2.5.0/gems/rest-client-2.1.0/Gemfile
+/var/lib/gems/2.5.0/gems/ffi-1.11.1/Gemfile
+/var/lib/gems/2.5.0/gems/warden-1.2.8/Gemfile
+/var/lib/gems/2.5.0/gems/public_suffix-4.0.1/Gemfile
+/var/lib/gems/2.5.0/gems/addressable-2.7.0/Gemfile
+/var/lib/gems/2.5.0/gems/mimemagic-0.3.3/Gemfile
+/var/lib/gems/2.5.0/gems/parser-2.6.5.0/Gemfile
+/var/lib/gems/2.5.0/gems/abstract_type-0.0.7/Gemfile
+/var/lib/gems/2.5.0/gems/http-cookie-1.0.3/Gemfile
+/var/lib/gems/2.5.0/gems/selenium-webdriver-3.142.6/Gemfile
+/var/lib/gems/2.5.0/gems/rb-inotify-0.10.0/Gemfile
+/var/lib/gems/2.5.0/gems/loofah-2.3.0/Gemfile
+/var/lib/gems/2.5.0/gems/childprocess-3.0.0/Gemfile
+/var/lib/gems/2.5.0/gems/ice_nine-0.11.2/Gemfile
+/var/lib/gems/2.5.0/gems/sinatra-2.0.7/Gemfile
+/var/lib/gems/2.5.0/gems/chromedriver-helper-2.1.1/Gemfile
+/var/lib/gems/2.5.0/gems/thread_safe-0.3.6/Gemfile
+/var/lib/gems/2.5.0/gems/regexp_parser-1.6.0/Gemfile
+/var/lib/gems/2.5.0/gems/nio4r-2.5.2/Gemfile
+/var/lib/gems/2.5.0/gems/orm_adapter-0.5.0/Gemfile
+/var/lib/gems/2.5.0/gems/uglifier-4.2.0/Gemfile
+/var/lib/gems/2.5.0/gems/crass-1.0.5/Gemfile
+/var/lib/gems/2.5.0/gems/spring-watcher-listen-2.0.1/Gemfile
+/var/lib/gems/2.5.0/gems/refile-mini_magick-0.2.0/Gemfile
+/var/lib/gems/2.5.0/gems/mini_portile2-2.4.0/Gemfile
+/var/lib/gems/2.5.0/gems/unf_ext-0.0.7.6/Gemfile
+/var/lib/gems/2.5.0/gems/rb-fsevent-0.10.3/Gemfile
+/var/lib/gems/2.5.0/gems/ast-2.4.0/Gemfile
+/var/lib/gems/2.5.0/gems/msgpack-1.3.1/Gemfile
+/var/lib/gems/2.5.0/gems/unf-0.1.4/Gemfile
+/var/lib/gems/2.5.0/gems/crass-1.0.4/Gemfile
+find: ‘/var/lib/snapd/void’: Permission denied
+find: ‘/var/lib/snapd/cookie’: Permission denied
+find: ‘/var/lib/update-notifier/package-data-downloads/partial’: Permission denied
+find: ‘/var/lib/polkit-1’: Permission denied
+find: ‘/var/tmp/systemd-private-9ba7ab4e176047a8b9043349d79baebb-systemd-resolved.service-0oASvg’: Permission denied
+find: ‘/var/log/unattended-upgrades’: Permission denied
+find: ‘/var/spool/cron/crontabs’: Permission denied
+find: ‘/var/spool/cron/atjobs’: Permission denied
+find: ‘/var/spool/cron/atspool’: Permission denied
+find: ‘/var/spool/rsyslog’: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: ‘/var/cache/ldconfig’: Permission denied
+find: ‘/lost+found’: Permission denied
+find: ‘/proc/tty/driver’: Permission denied
+find: ‘/proc/1/task/1/fd’: Permission denied
+find: ‘/proc/1/task/1/fdinfo’: Permission denied
+find: ‘/proc/1/task/1/ns’: Permission denied
+find: ‘/proc/1/fd’: Permission denied
+find: ‘/proc/1/map_files’: Permission denied
+find: ‘/proc/1/fdinfo’: Permission denied
+find: ‘/proc/1/ns’: Permission denied
+find: ‘/proc/2/task/2/fd’: Permission denied
+find: ‘/proc/2/task/2/fdinfo’: Permission denied
+find: ‘/proc/2/task/2/ns’: Permission denied
+find: ‘/proc/2/fd’: Permission denied
+find: ‘/proc/2/map_files’: Permission denied
+find: ‘/proc/2/fdinfo’: Permission denied
+find: ‘/proc/2/ns’: Permission denied
+find: ‘/proc/3/task/3/fd’: Permission denied
+find: ‘/proc/3/task/3/fdinfo’: Permission denied
+find: ‘/proc/3/task/3/ns’: Permission denied
+find: ‘/proc/3/fd’: Permission denied
+find: ‘/proc/3/map_files’: Permission denied
+find: ‘/proc/3/fdinfo’: Permission denied
+find: ‘/proc/3/ns’: Permission denied
+find: ‘/proc/4/task/4/fd’: Permission denied
+find: ‘/proc/4/task/4/fdinfo’: Permission denied
+find: ‘/proc/4/task/4/ns’: Permission denied
+find: ‘/proc/4/fd’: Permission denied
+find: ‘/proc/4/map_files’: Permission denied
+find: ‘/proc/4/fdinfo’: Permission denied
+find: ‘/proc/4/ns’: Permission denied
+find: ‘/proc/6/task/6/fd’: Permission denied
+find: ‘/proc/6/task/6/fdinfo’: Permission denied
+find: ‘/proc/6/task/6/ns’: Permission denied
+find: ‘/proc/6/fd’: Permission denied
+find: ‘/proc/6/map_files’: Permission denied
+find: ‘/proc/6/fdinfo’: Permission denied
+find: ‘/proc/6/ns’: Permission denied
+find: ‘/proc/7/task/7/fd’: Permission denied
+find: ‘/proc/7/task/7/fdinfo’: Permission denied
+find: ‘/proc/7/task/7/ns’: Permission denied
+find: ‘/proc/7/fd’: Permission denied
+find: ‘/proc/7/map_files’: Permission denied
+find: ‘/proc/7/fdinfo’: Permission denied
+find: ‘/proc/7/ns’: Permission denied
+find: ‘/proc/8/task/8/fd’: Permission denied
+find: ‘/proc/8/task/8/fdinfo’: Permission denied
+find: ‘/proc/8/task/8/ns’: Permission denied
+find: ‘/proc/8/fd’: Permission denied
+find: ‘/proc/8/map_files’: Permission denied
+find: ‘/proc/8/fdinfo’: Permission denied
+find: ‘/proc/8/ns’: Permission denied
+find: ‘/proc/9/task/9/fd’: Permission denied
+find: ‘/proc/9/task/9/fdinfo’: Permission denied
+find: ‘/proc/9/task/9/ns’: Permission denied
+find: ‘/proc/9/fd’: Permission denied
+find: ‘/proc/9/map_files’: Permission denied
+find: ‘/proc/9/fdinfo’: Permission denied
+find: ‘/proc/9/ns’: Permission denied
+find: ‘/proc/10/task/10/fd’: Permission denied
+find: ‘/proc/10/task/10/fdinfo’: Permission denied
+find: ‘/proc/10/task/10/ns’: Permission denied
+find: ‘/proc/10/fd’: Permission denied
+find: ‘/proc/10/map_files’: Permission denied
+find: ‘/proc/10/fdinfo’: Permission denied
+find: ‘/proc/10/ns’: Permission denied
+find: ‘/proc/11/task/11/fd’: Permission denied
+find: ‘/proc/11/task/11/fdinfo’: Permission denied
+find: ‘/proc/11/task/11/ns’: Permission denied
+find: ‘/proc/11/fd’: Permission denied
+find: ‘/proc/11/map_files’: Permission denied
+find: ‘/proc/11/fdinfo’: Permission denied
+find: ‘/proc/11/ns’: Permission denied
+find: ‘/proc/12/task/12/fd’: Permission denied
+find: ‘/proc/12/task/12/fdinfo’: Permission denied
+find: ‘/proc/12/task/12/ns’: Permission denied
+find: ‘/proc/12/fd’: Permission denied
+find: ‘/proc/12/map_files’: Permission denied
+find: ‘/proc/12/fdinfo’: Permission denied
+find: ‘/proc/12/ns’: Permission denied
+find: ‘/proc/13/task/13/fd’: Permission denied
+find: ‘/proc/13/task/13/fdinfo’: Permission denied
+find: ‘/proc/13/task/13/ns’: Permission denied
+find: ‘/proc/13/fd’: Permission denied
+find: ‘/proc/13/map_files’: Permission denied
+find: ‘/proc/13/fdinfo’: Permission denied
+find: ‘/proc/13/ns’: Permission denied
+find: ‘/proc/14/task/14/fd’: Permission denied
+find: ‘/proc/14/task/14/fdinfo’: Permission denied
+find: ‘/proc/14/task/14/ns’: Permission denied
+find: ‘/proc/14/fd’: Permission denied
+find: ‘/proc/14/map_files’: Permission denied
+find: ‘/proc/14/fdinfo’: Permission denied
+find: ‘/proc/14/ns’: Permission denied
+find: ‘/proc/15/task/15/fd’: Permission denied
+find: ‘/proc/15/task/15/fdinfo’: Permission denied
+find: ‘/proc/15/task/15/ns’: Permission denied
+find: ‘/proc/15/fd’: Permission denied
+find: ‘/proc/15/map_files’: Permission denied
+find: ‘/proc/15/fdinfo’: Permission denied
+find: ‘/proc/15/ns’: Permission denied
+find: ‘/proc/16/task/16/fd’: Permission denied
+find: ‘/proc/16/task/16/fdinfo’: Permission denied
+find: ‘/proc/16/task/16/ns’: Permission denied
+find: ‘/proc/16/fd’: Permission denied
+find: ‘/proc/16/map_files’: Permission denied
+find: ‘/proc/16/fdinfo’: Permission denied
+find: ‘/proc/16/ns’: Permission denied
+find: ‘/proc/18/task/18/fd’: Permission denied
+find: ‘/proc/18/task/18/fdinfo’: Permission denied
+find: ‘/proc/18/task/18/ns’: Permission denied
+find: ‘/proc/18/fd’: Permission denied
+find: ‘/proc/18/map_files’: Permission denied
+find: ‘/proc/18/fdinfo’: Permission denied
+find: ‘/proc/18/ns’: Permission denied
+find: ‘/proc/19/task/19/fd’: Permission denied
+find: ‘/proc/19/task/19/fdinfo’: Permission denied
+find: ‘/proc/19/task/19/ns’: Permission denied
+find: ‘/proc/19/fd’: Permission denied
+find: ‘/proc/19/map_files’: Permission denied
+find: ‘/proc/19/fdinfo’: Permission denied
+find: ‘/proc/19/ns’: Permission denied
+find: ‘/proc/20/task/20/fd’: Permission denied
+find: ‘/proc/20/task/20/fdinfo’: Permission denied
+find: ‘/proc/20/task/20/ns’: Permission denied
+find: ‘/proc/20/fd’: Permission denied
+find: ‘/proc/20/map_files’: Permission denied
+find: ‘/proc/20/fdinfo’: Permission denied
+find: ‘/proc/20/ns’: Permission denied
+find: ‘/proc/21/task/21/fd’: Permission denied
+find: ‘/proc/21/task/21/fdinfo’: Permission denied
+find: ‘/proc/21/task/21/ns’: Permission denied
+find: ‘/proc/21/fd’: Permission denied
+find: ‘/proc/21/map_files’: Permission denied
+find: ‘/proc/21/fdinfo’: Permission denied
+find: ‘/proc/21/ns’: Permission denied
+find: ‘/proc/22/task/22/fd’: Permission denied
+find: ‘/proc/22/task/22/fdinfo’: Permission denied
+find: ‘/proc/22/task/22/ns’: Permission denied
+find: ‘/proc/22/fd’: Permission denied
+find: ‘/proc/22/map_files’: Permission denied
+find: ‘/proc/22/fdinfo’: Permission denied
+find: ‘/proc/22/ns’: Permission denied
+find: ‘/proc/24/task/24/fd’: Permission denied
+find: ‘/proc/24/task/24/fdinfo’: Permission denied
+find: ‘/proc/24/task/24/ns’: Permission denied
+find: ‘/proc/24/fd’: Permission denied
+find: ‘/proc/24/map_files’: Permission denied
+find: ‘/proc/24/fdinfo’: Permission denied
+find: ‘/proc/24/ns’: Permission denied
+find: ‘/proc/25/task/25/fd’: Permission denied
+find: ‘/proc/25/task/25/fdinfo’: Permission denied
+find: ‘/proc/25/task/25/ns’: Permission denied
+find: ‘/proc/25/fd’: Permission denied
+find: ‘/proc/25/map_files’: Permission denied
+find: ‘/proc/25/fdinfo’: Permission denied
+find: ‘/proc/25/ns’: Permission denied
+find: ‘/proc/26/task/26/fd’: Permission denied
+find: ‘/proc/26/task/26/fdinfo’: Permission denied
+find: ‘/proc/26/task/26/ns’: Permission denied
+find: ‘/proc/26/fd’: Permission denied
+find: ‘/proc/26/map_files’: Permission denied
+find: ‘/proc/26/fdinfo’: Permission denied
+find: ‘/proc/26/ns’: Permission denied
+find: ‘/proc/27/task/27/fd’: Permission denied
+find: ‘/proc/27/task/27/fdinfo’: Permission denied
+find: ‘/proc/27/task/27/ns’: Permission denied
+find: ‘/proc/27/fd’: Permission denied
+find: ‘/proc/27/map_files’: Permission denied
+find: ‘/proc/27/fdinfo’: Permission denied
+find: ‘/proc/27/ns’: Permission denied
+find: ‘/proc/28/task/28/fd’: Permission denied
+find: ‘/proc/28/task/28/fdinfo’: Permission denied
+find: ‘/proc/28/task/28/ns’: Permission denied
+find: ‘/proc/28/fd’: Permission denied
+find: ‘/proc/28/map_files’: Permission denied
+find: ‘/proc/28/fdinfo’: Permission denied
+find: ‘/proc/28/ns’: Permission denied
+find: ‘/proc/29/task/29/fd’: Permission denied
+find: ‘/proc/29/task/29/fdinfo’: Permission denied
+find: ‘/proc/29/task/29/ns’: Permission denied
+find: ‘/proc/29/fd’: Permission denied
+find: ‘/proc/29/map_files’: Permission denied
+find: ‘/proc/29/fdinfo’: Permission denied
+find: ‘/proc/29/ns’: Permission denied
+find: ‘/proc/30/task/30/fd’: Permission denied
+find: ‘/proc/30/task/30/fdinfo’: Permission denied
+find: ‘/proc/30/task/30/ns’: Permission denied
+find: ‘/proc/30/fd’: Permission denied
+find: ‘/proc/30/map_files’: Permission denied
+find: ‘/proc/30/fdinfo’: Permission denied
+find: ‘/proc/30/ns’: Permission denied
+find: ‘/proc/31/task/31/fd’: Permission denied
+find: ‘/proc/31/task/31/fdinfo’: Permission denied
+find: ‘/proc/31/task/31/ns’: Permission denied
+find: ‘/proc/31/fd’: Permission denied
+find: ‘/proc/31/map_files’: Permission denied
+find: ‘/proc/31/fdinfo’: Permission denied
+find: ‘/proc/31/ns’: Permission denied
+find: ‘/proc/32/task/32/fd’: Permission denied
+find: ‘/proc/32/task/32/fdinfo’: Permission denied
+find: ‘/proc/32/task/32/ns’: Permission denied
+find: ‘/proc/32/fd’: Permission denied
+find: ‘/proc/32/map_files’: Permission denied
+find: ‘/proc/32/fdinfo’: Permission denied
+find: ‘/proc/32/ns’: Permission denied
+find: ‘/proc/33/task/33/fd’: Permission denied
+find: ‘/proc/33/task/33/fdinfo’: Permission denied
+find: ‘/proc/33/task/33/ns’: Permission denied
+find: ‘/proc/33/fd’: Permission denied
+find: ‘/proc/33/map_files’: Permission denied
+find: ‘/proc/33/fdinfo’: Permission denied
+find: ‘/proc/33/ns’: Permission denied
+find: ‘/proc/34/task/34/fd’: Permission denied
+find: ‘/proc/34/task/34/fdinfo’: Permission denied
+find: ‘/proc/34/task/34/ns’: Permission denied
+find: ‘/proc/34/fd’: Permission denied
+find: ‘/proc/34/map_files’: Permission denied
+find: ‘/proc/34/fdinfo’: Permission denied
+find: ‘/proc/34/ns’: Permission denied
+find: ‘/proc/35/task/35/fd’: Permission denied
+find: ‘/proc/35/task/35/fdinfo’: Permission denied
+find: ‘/proc/35/task/35/ns’: Permission denied
+find: ‘/proc/35/fd’: Permission denied
+find: ‘/proc/35/map_files’: Permission denied
+find: ‘/proc/35/fdinfo’: Permission denied
+find: ‘/proc/35/ns’: Permission denied
+find: ‘/proc/36/task/36/fd’: Permission denied
+find: ‘/proc/36/task/36/fdinfo’: Permission denied
+find: ‘/proc/36/task/36/ns’: Permission denied
+find: ‘/proc/36/fd’: Permission denied
+find: ‘/proc/36/map_files’: Permission denied
+find: ‘/proc/36/fdinfo’: Permission denied
+find: ‘/proc/36/ns’: Permission denied
+find: ‘/proc/37/task/37/fd’: Permission denied
+find: ‘/proc/37/task/37/fdinfo’: Permission denied
+find: ‘/proc/37/task/37/ns’: Permission denied
+find: ‘/proc/37/fd’: Permission denied
+find: ‘/proc/37/map_files’: Permission denied
+find: ‘/proc/37/fdinfo’: Permission denied
+find: ‘/proc/37/ns’: Permission denied
+find: ‘/proc/39/task/39/fd’: Permission denied
+find: ‘/proc/39/task/39/fdinfo’: Permission denied
+find: ‘/proc/39/task/39/ns’: Permission denied
+find: ‘/proc/39/fd’: Permission denied
+find: ‘/proc/39/map_files’: Permission denied
+find: ‘/proc/39/fdinfo’: Permission denied
+find: ‘/proc/39/ns’: Permission denied
+find: ‘/proc/41/task/41/fd’: Permission denied
+find: ‘/proc/41/task/41/fdinfo’: Permission denied
+find: ‘/proc/41/task/41/ns’: Permission denied
+find: ‘/proc/41/fd’: Permission denied
+find: ‘/proc/41/map_files’: Permission denied
+find: ‘/proc/41/fdinfo’: Permission denied
+find: ‘/proc/41/ns’: Permission denied
+find: ‘/proc/42/task/42/fd’: Permission denied
+find: ‘/proc/42/task/42/fdinfo’: Permission denied
+find: ‘/proc/42/task/42/ns’: Permission denied
+find: ‘/proc/42/fd’: Permission denied
+find: ‘/proc/42/map_files’: Permission denied
+find: ‘/proc/42/fdinfo’: Permission denied
+find: ‘/proc/42/ns’: Permission denied
+find: ‘/proc/43/task/43/fd’: Permission denied
+find: ‘/proc/43/task/43/fdinfo’: Permission denied
+find: ‘/proc/43/task/43/ns’: Permission denied
+find: ‘/proc/43/fd’: Permission denied
+find: ‘/proc/43/map_files’: Permission denied
+find: ‘/proc/43/fdinfo’: Permission denied
+find: ‘/proc/43/ns’: Permission denied
+find: ‘/proc/85/task/85/fd’: Permission denied
+find: ‘/proc/85/task/85/fdinfo’: Permission denied
+find: ‘/proc/85/task/85/ns’: Permission denied
+find: ‘/proc/85/fd’: Permission denied
+find: ‘/proc/85/map_files’: Permission denied
+find: ‘/proc/85/fdinfo’: Permission denied
+find: ‘/proc/85/ns’: Permission denied
+find: ‘/proc/86/task/86/fd’: Permission denied
+find: ‘/proc/86/task/86/fdinfo’: Permission denied
+find: ‘/proc/86/task/86/ns’: Permission denied
+find: ‘/proc/86/fd’: Permission denied
+find: ‘/proc/86/map_files’: Permission denied
+find: ‘/proc/86/fdinfo’: Permission denied
+find: ‘/proc/86/ns’: Permission denied
+find: ‘/proc/88/task/88/fd’: Permission denied
+find: ‘/proc/88/task/88/fdinfo’: Permission denied
+find: ‘/proc/88/task/88/ns’: Permission denied
+find: ‘/proc/88/fd’: Permission denied
+find: ‘/proc/88/map_files’: Permission denied
+find: ‘/proc/88/fdinfo’: Permission denied
+find: ‘/proc/88/ns’: Permission denied
+find: ‘/proc/89/task/89/fd’: Permission denied
+find: ‘/proc/89/task/89/fdinfo’: Permission denied
+find: ‘/proc/89/task/89/ns’: Permission denied
+find: ‘/proc/89/fd’: Permission denied
+find: ‘/proc/89/map_files’: Permission denied
+find: ‘/proc/89/fdinfo’: Permission denied
+find: ‘/proc/89/ns’: Permission denied
+find: ‘/proc/90/task/90/fd’: Permission denied
+find: ‘/proc/90/task/90/fdinfo’: Permission denied
+find: ‘/proc/90/task/90/ns’: Permission denied
+find: ‘/proc/90/fd’: Permission denied
+find: ‘/proc/90/map_files’: Permission denied
+find: ‘/proc/90/fdinfo’: Permission denied
+find: ‘/proc/90/ns’: Permission denied
+find: ‘/proc/91/task/91/fd’: Permission denied
+find: ‘/proc/91/task/91/fdinfo’: Permission denied
+find: ‘/proc/91/task/91/ns’: Permission denied
+find: ‘/proc/91/fd’: Permission denied
+find: ‘/proc/91/map_files’: Permission denied
+find: ‘/proc/91/fdinfo’: Permission denied
+find: ‘/proc/91/ns’: Permission denied
+find: ‘/proc/93/task/93/fd’: Permission denied
+find: ‘/proc/93/task/93/fdinfo’: Permission denied
+find: ‘/proc/93/task/93/ns’: Permission denied
+find: ‘/proc/93/fd’: Permission denied
+find: ‘/proc/93/map_files’: Permission denied
+find: ‘/proc/93/fdinfo’: Permission denied
+find: ‘/proc/93/ns’: Permission denied
+find: ‘/proc/97/task/97/fd’: Permission denied
+find: ‘/proc/97/task/97/fdinfo’: Permission denied
+find: ‘/proc/97/task/97/ns’: Permission denied
+find: ‘/proc/97/fd’: Permission denied
+find: ‘/proc/97/map_files’: Permission denied
+find: ‘/proc/97/fdinfo’: Permission denied
+find: ‘/proc/97/ns’: Permission denied
+find: ‘/proc/106/task/106/fd’: Permission denied
+find: ‘/proc/106/task/106/fdinfo’: Permission denied
+find: ‘/proc/106/task/106/ns’: Permission denied
+find: ‘/proc/106/fd’: Permission denied
+find: ‘/proc/106/map_files’: Permission denied
+find: ‘/proc/106/fdinfo’: Permission denied
+find: ‘/proc/106/ns’: Permission denied
+find: ‘/proc/123/task/123/fd’: Permission denied
+find: ‘/proc/123/task/123/fdinfo’: Permission denied
+find: ‘/proc/123/task/123/ns’: Permission denied
+find: ‘/proc/123/fd’: Permission denied
+find: ‘/proc/123/map_files’: Permission denied
+find: ‘/proc/123/fdinfo’: Permission denied
+find: ‘/proc/123/ns’: Permission denied
+find: ‘/proc/211/task/211/fd’: Permission denied
+find: ‘/proc/211/task/211/fdinfo’: Permission denied
+find: ‘/proc/211/task/211/ns’: Permission denied
+find: ‘/proc/211/fd’: Permission denied
+find: ‘/proc/211/map_files’: Permission denied
+find: ‘/proc/211/fdinfo’: Permission denied
+find: ‘/proc/211/ns’: Permission denied
+find: ‘/proc/212/task/212/fd’: Permission denied
+find: ‘/proc/212/task/212/fdinfo’: Permission denied
+find: ‘/proc/212/task/212/ns’: Permission denied
+find: ‘/proc/212/fd’: Permission denied
+find: ‘/proc/212/map_files’: Permission denied
+find: ‘/proc/212/fdinfo’: Permission denied
+find: ‘/proc/212/ns’: Permission denied
+find: ‘/proc/213/task/213/fd’: Permission denied
+find: ‘/proc/213/task/213/fdinfo’: Permission denied
+find: ‘/proc/213/task/213/ns’: Permission denied
+find: ‘/proc/213/fd’: Permission denied
+find: ‘/proc/213/map_files’: Permission denied
+find: ‘/proc/213/fdinfo’: Permission denied
+find: ‘/proc/213/ns’: Permission denied
+find: ‘/proc/214/task/214/fd’: Permission denied
+find: ‘/proc/214/task/214/fdinfo’: Permission denied
+find: ‘/proc/214/task/214/ns’: Permission denied
+find: ‘/proc/214/fd’: Permission denied
+find: ‘/proc/214/map_files’: Permission denied
+find: ‘/proc/214/fdinfo’: Permission denied
+find: ‘/proc/214/ns’: Permission denied
+find: ‘/proc/215/task/215/fd’: Permission denied
+find: ‘/proc/215/task/215/fdinfo’: Permission denied
+find: ‘/proc/215/task/215/ns’: Permission denied
+find: ‘/proc/215/fd’: Permission denied
+find: ‘/proc/215/map_files’: Permission denied
+find: ‘/proc/215/fdinfo’: Permission denied
+find: ‘/proc/215/ns’: Permission denied
+find: ‘/proc/218/task/218/fd’: Permission denied
+find: ‘/proc/218/task/218/fdinfo’: Permission denied
+find: ‘/proc/218/task/218/ns’: Permission denied
+find: ‘/proc/218/fd’: Permission denied
+find: ‘/proc/218/map_files’: Permission denied
+find: ‘/proc/218/fdinfo’: Permission denied
+find: ‘/proc/218/ns’: Permission denied
+find: ‘/proc/220/task/220/fd’: Permission denied
+find: ‘/proc/220/task/220/fdinfo’: Permission denied
+find: ‘/proc/220/task/220/ns’: Permission denied
+find: ‘/proc/220/fd’: Permission denied
+find: ‘/proc/220/map_files’: Permission denied
+find: ‘/proc/220/fdinfo’: Permission denied
+find: ‘/proc/220/ns’: Permission denied
+find: ‘/proc/288/task/288/fd’: Permission denied
+find: ‘/proc/288/task/288/fdinfo’: Permission denied
+find: ‘/proc/288/task/288/ns’: Permission denied
+find: ‘/proc/288/fd’: Permission denied
+find: ‘/proc/288/map_files’: Permission denied
+find: ‘/proc/288/fdinfo’: Permission denied
+find: ‘/proc/288/ns’: Permission denied
+find: ‘/proc/340/task/340/fd’: Permission denied
+find: ‘/proc/340/task/340/fdinfo’: Permission denied
+find: ‘/proc/340/task/340/ns’: Permission denied
+find: ‘/proc/340/fd’: Permission denied
+find: ‘/proc/340/map_files’: Permission denied
+find: ‘/proc/340/fdinfo’: Permission denied
+find: ‘/proc/340/ns’: Permission denied
+find: ‘/proc/341/task/341/fd’: Permission denied
+find: ‘/proc/341/task/341/fdinfo’: Permission denied
+find: ‘/proc/341/task/341/ns’: Permission denied
+find: ‘/proc/341/fd’: Permission denied
+find: ‘/proc/341/map_files’: Permission denied
+find: ‘/proc/341/fdinfo’: Permission denied
+find: ‘/proc/341/ns’: Permission denied
+find: ‘/proc/409/task/409/fd’: Permission denied
+find: ‘/proc/409/task/409/fdinfo’: Permission denied
+find: ‘/proc/409/task/409/ns’: Permission denied
+find: ‘/proc/409/fd’: Permission denied
+find: ‘/proc/409/map_files’: Permission denied
+find: ‘/proc/409/fdinfo’: Permission denied
+find: ‘/proc/409/ns’: Permission denied
+find: ‘/proc/411/task/411/fd’: Permission denied
+find: ‘/proc/411/task/411/fdinfo’: Permission denied
+find: ‘/proc/411/task/411/ns’: Permission denied
+find: ‘/proc/411/fd’: Permission denied
+find: ‘/proc/411/map_files’: Permission denied
+find: ‘/proc/411/fdinfo’: Permission denied
+find: ‘/proc/411/ns’: Permission denied
+find: ‘/proc/415/task/415/fd’: Permission denied
+find: ‘/proc/415/task/415/fdinfo’: Permission denied
+find: ‘/proc/415/task/415/ns’: Permission denied
+find: ‘/proc/415/fd’: Permission denied
+find: ‘/proc/415/map_files’: Permission denied
+find: ‘/proc/415/fdinfo’: Permission denied
+find: ‘/proc/415/ns’: Permission denied
+find: ‘/proc/416/task/416/fd’: Permission denied
+find: ‘/proc/416/task/416/fdinfo’: Permission denied
+find: ‘/proc/416/task/416/ns’: Permission denied
+find: ‘/proc/416/fd’: Permission denied
+find: ‘/proc/416/map_files’: Permission denied
+find: ‘/proc/416/fdinfo’: Permission denied
+find: ‘/proc/416/ns’: Permission denied
+find: ‘/proc/417/task/417/fd’: Permission denied
+find: ‘/proc/417/task/417/fdinfo’: Permission denied
+find: ‘/proc/417/task/417/ns’: Permission denied
+find: ‘/proc/417/fd’: Permission denied
+find: ‘/proc/417/map_files’: Permission denied
+find: ‘/proc/417/fdinfo’: Permission denied
+find: ‘/proc/417/ns’: Permission denied
+find: ‘/proc/419/task/419/fd’: Permission denied
+find: ‘/proc/419/task/419/fdinfo’: Permission denied
+find: ‘/proc/419/task/419/ns’: Permission denied
+find: ‘/proc/419/fd’: Permission denied
+find: ‘/proc/419/map_files’: Permission denied
+find: ‘/proc/419/fdinfo’: Permission denied
+find: ‘/proc/419/ns’: Permission denied
+find: ‘/proc/426/task/426/fd’: Permission denied
+find: ‘/proc/426/task/426/fdinfo’: Permission denied
+find: ‘/proc/426/task/426/ns’: Permission denied
+find: ‘/proc/426/fd’: Permission denied
+find: ‘/proc/426/map_files’: Permission denied
+find: ‘/proc/426/fdinfo’: Permission denied
+find: ‘/proc/426/ns’: Permission denied
+find: ‘/proc/435/task/435/fd’: Permission denied
+find: ‘/proc/435/task/435/fdinfo’: Permission denied
+find: ‘/proc/435/task/435/ns’: Permission denied
+find: ‘/proc/435/fd’: Permission denied
+find: ‘/proc/435/map_files’: Permission denied
+find: ‘/proc/435/fdinfo’: Permission denied
+find: ‘/proc/435/ns’: Permission denied
+find: ‘/proc/436/task/436/fd’: Permission denied
+find: ‘/proc/436/task/436/fdinfo’: Permission denied
+find: ‘/proc/436/task/436/ns’: Permission denied
+find: ‘/proc/436/fd’: Permission denied
+find: ‘/proc/436/map_files’: Permission denied
+find: ‘/proc/436/fdinfo’: Permission denied
+find: ‘/proc/436/ns’: Permission denied
+find: ‘/proc/461/task/461/fd’: Permission denied
+find: ‘/proc/461/task/461/fdinfo’: Permission denied
+find: ‘/proc/461/task/461/ns’: Permission denied
+find: ‘/proc/461/fd’: Permission denied
+find: ‘/proc/461/map_files’: Permission denied
+find: ‘/proc/461/fdinfo’: Permission denied
+find: ‘/proc/461/ns’: Permission denied
+find: ‘/proc/705/task/705/fd’: Permission denied
+find: ‘/proc/705/task/705/fdinfo’: Permission denied
+find: ‘/proc/705/task/705/ns’: Permission denied
+find: ‘/proc/705/fd’: Permission denied
+find: ‘/proc/705/map_files’: Permission denied
+find: ‘/proc/705/fdinfo’: Permission denied
+find: ‘/proc/705/ns’: Permission denied
+find: ‘/proc/819/task/819/fd’: Permission denied
+find: ‘/proc/819/task/819/fdinfo’: Permission denied
+find: ‘/proc/819/task/819/ns’: Permission denied
+find: ‘/proc/819/task/835/fd’: Permission denied
+find: ‘/proc/819/task/835/fdinfo’: Permission denied
+find: ‘/proc/819/task/835/ns’: Permission denied
+find: ‘/proc/819/task/836/fd’: Permission denied
+find: ‘/proc/819/task/836/fdinfo’: Permission denied
+find: ‘/proc/819/task/836/ns’: Permission denied
+find: ‘/proc/819/task/837/fd’: Permission denied
+find: ‘/proc/819/task/837/fdinfo’: Permission denied
+find: ‘/proc/819/task/837/ns’: Permission denied
+find: ‘/proc/819/fd’: Permission denied
+find: ‘/proc/819/map_files’: Permission denied
+find: ‘/proc/819/fdinfo’: Permission denied
+find: ‘/proc/819/ns’: Permission denied
+find: ‘/proc/826/task/826/fd’: Permission denied
+find: ‘/proc/826/task/826/fdinfo’: Permission denied
+find: ‘/proc/826/task/826/ns’: Permission denied
+find: ‘/proc/826/fd’: Permission denied
+find: ‘/proc/826/map_files’: Permission denied
+find: ‘/proc/826/fdinfo’: Permission denied
+find: ‘/proc/826/ns’: Permission denied
+find: ‘/proc/832/task/832/fd’: Permission denied
+find: ‘/proc/832/task/832/fdinfo’: Permission denied
+find: ‘/proc/832/task/832/ns’: Permission denied
+find: ‘/proc/832/task/873/fd’: Permission denied
+find: ‘/proc/832/task/873/fdinfo’: Permission denied
+find: ‘/proc/832/task/873/ns’: Permission denied
+find: ‘/proc/832/task/874/fd’: Permission denied
+find: ‘/proc/832/task/874/fdinfo’: Permission denied
+find: ‘/proc/832/task/874/ns’: Permission denied
+find: ‘/proc/832/task/2077/fd’: Permission denied
+find: ‘/proc/832/task/2077/fdinfo’: Permission denied
+find: ‘/proc/832/task/2077/ns’: Permission denied
+find: ‘/proc/832/fd’: Permission denied
+find: ‘/proc/832/map_files’: Permission denied
+find: ‘/proc/832/fdinfo’: Permission denied
+find: ‘/proc/832/ns’: Permission denied
+find: ‘/proc/872/task/872/fd’: Permission denied
+find: ‘/proc/872/task/872/fdinfo’: Permission denied
+find: ‘/proc/872/task/872/ns’: Permission denied
+find: ‘/proc/872/task/887/fd’: Permission denied
+find: ‘/proc/872/task/887/fdinfo’: Permission denied
+find: ‘/proc/872/task/887/ns’: Permission denied
+find: ‘/proc/872/fd’: Permission denied
+find: ‘/proc/872/map_files’: Permission denied
+find: ‘/proc/872/fdinfo’: Permission denied
+find: ‘/proc/872/ns’: Permission denied
+find: ‘/proc/897/task/897/fd’: Permission denied
+find: ‘/proc/897/task/897/fdinfo’: Permission denied
+find: ‘/proc/897/task/897/ns’: Permission denied
+find: ‘/proc/897/fd’: Permission denied
+find: ‘/proc/897/map_files’: Permission denied
+find: ‘/proc/897/fdinfo’: Permission denied
+find: ‘/proc/897/ns’: Permission denied
+find: ‘/proc/920/task/920/fd’: Permission denied
+find: ‘/proc/920/task/920/fdinfo’: Permission denied
+find: ‘/proc/920/task/920/ns’: Permission denied
+find: ‘/proc/920/task/947/fd’: Permission denied
+find: ‘/proc/920/task/947/fdinfo’: Permission denied
+find: ‘/proc/920/task/947/ns’: Permission denied
+find: ‘/proc/920/task/1009/fd’: Permission denied
+find: ‘/proc/920/task/1009/fdinfo’: Permission denied
+find: ‘/proc/920/task/1009/ns’: Permission denied
+find: ‘/proc/920/fd’: Permission denied
+find: ‘/proc/920/map_files’: Permission denied
+find: ‘/proc/920/fdinfo’: Permission denied
+find: ‘/proc/920/ns’: Permission denied
+find: ‘/proc/949/task/949/fd’: Permission denied
+find: ‘/proc/949/task/949/fdinfo’: Permission denied
+find: ‘/proc/949/task/949/ns’: Permission denied
+find: ‘/proc/949/fd’: Permission denied
+find: ‘/proc/949/map_files’: Permission denied
+find: ‘/proc/949/fdinfo’: Permission denied
+find: ‘/proc/949/ns’: Permission denied
+find: ‘/proc/983/task/983/fd’: Permission denied
+find: ‘/proc/983/task/983/fdinfo’: Permission denied
+find: ‘/proc/983/task/983/ns’: Permission denied
+find: ‘/proc/983/fd’: Permission denied
+find: ‘/proc/983/map_files’: Permission denied
+find: ‘/proc/983/fdinfo’: Permission denied
+find: ‘/proc/983/ns’: Permission denied
+find: ‘/proc/992/task/992/fd’: Permission denied
+find: ‘/proc/992/task/992/fdinfo’: Permission denied
+find: ‘/proc/992/task/992/ns’: Permission denied
+find: ‘/proc/992/task/1153/fd’: Permission denied
+find: ‘/proc/992/task/1153/fdinfo’: Permission denied
+find: ‘/proc/992/task/1153/ns’: Permission denied
+find: ‘/proc/992/fd’: Permission denied
+find: ‘/proc/992/map_files’: Permission denied
+find: ‘/proc/992/fdinfo’: Permission denied
+find: ‘/proc/992/ns’: Permission denied
+find: ‘/proc/1027/task/1027/fd’: Permission denied
+find: ‘/proc/1027/task/1027/fdinfo’: Permission denied
+find: ‘/proc/1027/task/1027/ns’: Permission denied
+find: ‘/proc/1027/fd’: Permission denied
+find: ‘/proc/1027/map_files’: Permission denied
+find: ‘/proc/1027/fdinfo’: Permission denied
+find: ‘/proc/1027/ns’: Permission denied
+find: ‘/proc/1130/task/1130/fd’: Permission denied
+find: ‘/proc/1130/task/1130/fdinfo’: Permission denied
+find: ‘/proc/1130/task/1130/ns’: Permission denied
+find: ‘/proc/1130/task/1293/fd’: Permission denied
+find: ‘/proc/1130/task/1293/fdinfo’: Permission denied
+find: ‘/proc/1130/task/1293/ns’: Permission denied
+find: ‘/proc/1130/fd’: Permission denied
+find: ‘/proc/1130/map_files’: Permission denied
+find: ‘/proc/1130/fdinfo’: Permission denied
+find: ‘/proc/1130/ns’: Permission denied
+find: ‘/proc/1156/task/1156/fd’: Permission denied
+find: ‘/proc/1156/task/1156/fdinfo’: Permission denied
+find: ‘/proc/1156/task/1156/ns’: Permission denied
+find: ‘/proc/1156/task/1166/fd’: Permission denied
+find: ‘/proc/1156/task/1166/fdinfo’: Permission denied
+find: ‘/proc/1156/task/1166/ns’: Permission denied
+find: ‘/proc/1156/task/1171/fd’: Permission denied
+find: ‘/proc/1156/task/1171/fdinfo’: Permission denied
+find: ‘/proc/1156/task/1171/ns’: Permission denied
+find: ‘/proc/1156/fd’: Permission denied
+find: ‘/proc/1156/map_files’: Permission denied
+find: ‘/proc/1156/fdinfo’: Permission denied
+find: ‘/proc/1156/ns’: Permission denied
+find: ‘/proc/1195/task/1195/fd’: Permission denied
+find: ‘/proc/1195/task/1195/fdinfo’: Permission denied
+find: ‘/proc/1195/task/1195/ns’: Permission denied
+find: ‘/proc/1195/fd’: Permission denied
+find: ‘/proc/1195/map_files’: Permission denied
+find: ‘/proc/1195/fdinfo’: Permission denied
+find: ‘/proc/1195/ns’: Permission denied
+find: ‘/proc/1233/task/1233/fd’: Permission denied
+find: ‘/proc/1233/task/1233/fdinfo’: Permission denied
+find: ‘/proc/1233/task/1233/ns’: Permission denied
+find: ‘/proc/1233/fd’: Permission denied
+find: ‘/proc/1233/map_files’: Permission denied
+find: ‘/proc/1233/fdinfo’: Permission denied
+find: ‘/proc/1233/ns’: Permission denied
+find: ‘/proc/1269/task/1269/fd’: Permission denied
+find: ‘/proc/1269/task/1269/fdinfo’: Permission denied
+find: ‘/proc/1269/task/1269/ns’: Permission denied
+find: ‘/proc/1269/task/1270/fd’: Permission denied
+find: ‘/proc/1269/task/1270/fdinfo’: Permission denied
+find: ‘/proc/1269/task/1270/ns’: Permission denied
+find: ‘/proc/1269/task/1271/fd’: Permission denied
+find: ‘/proc/1269/task/1271/fdinfo’: Permission denied
+find: ‘/proc/1269/task/1271/ns’: Permission denied
+find: ‘/proc/1269/task/1272/fd’: Permission denied
+find: ‘/proc/1269/task/1272/fdinfo’: Permission denied
+find: ‘/proc/1269/task/1272/ns’: Permission denied
+find: ‘/proc/1269/task/1273/fd’: Permission denied
+find: ‘/proc/1269/task/1273/fdinfo’: Permission denied
+find: ‘/proc/1269/task/1273/ns’: Permission denied
+find: ‘/proc/1269/task/1274/fd’: Permission denied
+find: ‘/proc/1269/task/1274/fdinfo’: Permission denied
+find: ‘/proc/1269/task/1274/ns’: Permission denied
+find: ‘/proc/1269/task/1285/fd’: Permission denied
+find: ‘/proc/1269/task/1285/fdinfo’: Permission denied
+find: ‘/proc/1269/task/1285/ns’: Permission denied
+find: ‘/proc/1269/task/1286/fd’: Permission denied
+find: ‘/proc/1269/task/1286/fdinfo’: Permission denied
+find: ‘/proc/1269/task/1286/ns’: Permission denied
+find: ‘/proc/1269/fd’: Permission denied
+find: ‘/proc/1269/map_files’: Permission denied
+find: ‘/proc/1269/fdinfo’: Permission denied
+find: ‘/proc/1269/ns’: Permission denied
+find: ‘/proc/1742/task/1742/fd’: Permission denied
+find: ‘/proc/1742/task/1742/fdinfo’: Permission denied
+find: ‘/proc/1742/task/1742/ns’: Permission denied
+find: ‘/proc/1742/fd’: Permission denied
+find: ‘/proc/1742/map_files’: Permission denied
+find: ‘/proc/1742/fdinfo’: Permission denied
+find: ‘/proc/1742/ns’: Permission denied
+find: ‘/proc/1842/task/1842/fd’: Permission denied
+find: ‘/proc/1842/task/1842/fdinfo’: Permission denied
+find: ‘/proc/1842/task/1842/ns’: Permission denied
+find: ‘/proc/1842/fd’: Permission denied
+find: ‘/proc/1842/map_files’: Permission denied
+find: ‘/proc/1842/fdinfo’: Permission denied
+find: ‘/proc/1842/ns’: Permission denied
+find: ‘/proc/1845/task/1845/fd’: Permission denied
+find: ‘/proc/1845/task/1845/fdinfo’: Permission denied
+find: ‘/proc/1845/task/1845/ns’: Permission denied
+find: ‘/proc/1845/fd’: Permission denied
+find: ‘/proc/1845/map_files’: Permission denied
+find: ‘/proc/1845/fdinfo’: Permission denied
+find: ‘/proc/1845/ns’: Permission denied
+find: ‘/proc/1933/task/1933/fd’: Permission denied
+find: ‘/proc/1933/task/1933/fdinfo’: Permission denied
+find: ‘/proc/1933/task/1933/ns’: Permission denied
+find: ‘/proc/1933/fd’: Permission denied
+find: ‘/proc/1933/map_files’: Permission denied
+find: ‘/proc/1933/fdinfo’: Permission denied
+find: ‘/proc/1933/ns’: Permission denied
+find: ‘/proc/2044/task/2044/fd’: Permission denied
+find: ‘/proc/2044/task/2044/fdinfo’: Permission denied
+find: ‘/proc/2044/task/2044/ns’: Permission denied
+find: ‘/proc/2044/fd’: Permission denied
+find: ‘/proc/2044/map_files’: Permission denied
+find: ‘/proc/2044/fdinfo’: Permission denied
+find: ‘/proc/2044/ns’: Permission denied
+find: ‘/proc/2045/task/2045/fd’: Permission denied
+find: ‘/proc/2045/task/2045/fdinfo’: Permission denied
+find: ‘/proc/2045/task/2045/ns’: Permission denied
+find: ‘/proc/2045/fd’: Permission denied
+find: ‘/proc/2045/map_files’: Permission denied
+find: ‘/proc/2045/fdinfo’: Permission denied
+find: ‘/proc/2045/ns’: Permission denied
+find: ‘/etc/sudoers.d’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+/vagrant/meshiterro/Gemfile
+/vagrant/sample_app/Gemfile
+/vagrant/Bookers/Gemfile
+/vagrant/CARAVAN/Gemfile
+/usr/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/Gemfile
+/usr/lib/ruby/gems/2.5.0/gems/xmlrpc-0.3.0/Gemfile
+/usr/lib/ruby/gems/2.5.0/gems/net-telnet-0.1.1/Gemfile
+/usr/lib/ruby/gems/2.5.0/gems/power_assert-1.1.1/Gemfile
+/usr/lib/ruby/gems/2.5.0/gems/rake-12.3.0/Gemfile
+find: ‘/run/lxcfs’: Permission denied
+find: ‘/run/sudo’: Permission denied
+find: ‘/run/cryptsetup’: Permission denied
+find: ‘/run/lvm’: Permission denied
+find: ‘/run/systemd/unit-root’: Permission denied
+find: ‘/run/systemd/inaccessible’: Permission denied
+find: ‘/run/lock/lvm’: Permission denied
+find: ‘/root’: Permission denied
+/home/vagrant/.bundle/ruby/2.5.0/refile-46b4178654e6/Gemfile
+find: ‘/home/ubuntu/.ssh’: Permission denied
+vagrant@ubuntu-bionic:/vagrant$ cd meshiterro
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/............
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 13.0.0
+Following files may not be writable, so sudo is needed:
+  /usr/local/bin
+  /var/lib/gems/2.5.0
+  /var/lib/gems/2.5.0/build_info
+  /var/lib/gems/2.5.0/cache
+  /var/lib/gems/2.5.0/doc
+  /var/lib/gems/2.5.0/extensions
+  /var/lib/gems/2.5.0/gems
+  /var/lib/gems/2.5.0/specifications
+Using concurrent-ruby 1.1.5
+Using i18n 1.7.0
+Using minitest 5.12.2
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.3
+Using builder 3.2.3
+Using erubi 1.9.0
+Using mini_portile2 2.4.0
+Using nokogiri 1.10.4
+Using rails-dom-testing 2.0.3
+Using crass 1.0.5
+Using loofah 2.3.0
+Using rails-html-sanitizer 1.3.0
+Using actionview 5.2.3
+Using rack 2.0.7
+Using rack-test 1.1.0
+Using actionpack 5.2.3
+Using nio4r 2.5.2
+Using websocket-extensions 0.1.4
+Using websocket-driver 0.7.1
+Using actioncable 5.2.3
+Using globalid 0.4.2
+Using activejob 5.2.3
+Using mini_mime 1.0.2
+Using mail 2.7.1
+Using actionmailer 5.2.3
+Using activemodel 5.2.3
+Using arel 9.0.0
+Using activerecord 5.2.3
+Using mimemagic 0.3.3
+Using marcel 0.3.3
+Using activestorage 5.2.3
+Using public_suffix 4.0.1
+Using addressable 2.7.0
+Using io-like 0.3.0
+Using archive-zip 0.12.0
+Using bcrypt 3.1.13
+Using bindex 0.8.1
+Using msgpack 1.3.1
+Using bootsnap 1.4.5
+Using bundler 2.0.2
+Using byebug 11.0.1
+Using regexp_parser 1.6.0
+Using xpath 3.2.0
+Using capybara 3.29.0
+Using childprocess 3.0.0
+Using chromedriver-helper 2.1.1
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using coffee-script 2.4.1
+Using method_source 0.9.2
+Using thor 0.20.3
+Using railties 5.2.3
+Using coffee-rails 4.2.2
+Using orm_adapter 0.5.0
+Using responders 3.0.0
+Using warden 1.2.8
+Using devise 4.7.1
+Using ffi 1.11.1
+Using jbuilder 2.9.1
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.10.0
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Using puma 3.12.1
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.3
+Using rubyzip 2.0.0
+Using sass-listen 4.0.0
+Using sass 3.7.4
+Using tilt 2.0.10
+Using sass-rails 5.1.0
+Using selenium-webdriver 3.142.6
+Using spring 2.1.0
+Using spring-watcher-listen 2.0.1
+Using sqlite3 1.4.1
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.1
+Using uglifier 4.2.0
+Using web-console 3.7.0
+Bundle complete! 19 Gemfile dependencies, 83 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails g devise:install
+Running via Spring preloader in process 2168
+      create  config/initializers/devise.rb
+      create  config/locales/devise.en.yml
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  1. Ensure you have defined default url options in your environments files. Here
+     is an example of default_url_options appropriate for a development environment
+     in config/environments/development.rb:
+
+       config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+     In production, :host should be set to the actual host of your application.
+
+  2. Ensure you have defined root_url to *something* in your config/routes.rb.
+     For example:
+
+       root to: "home#index"
+
+  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
+     For example:
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+  4. You can copy Devise views (for customization) to your app by running:
+
+       rails g devise:views
+
+===============================================================================
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails g devise User
+Running via Spring preloader in process 2195
+      invoke  active_record
+      create    db/migrate/20191016061501_devise_create_users.rb
+      create    app/models/user.rb
+      invoke    test_unit
+      create      test/models/user_test.rb
+      create      test/fixtures/users.yml
+      insert    app/models/user.rb
+       route  devise_for :users
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails db:migrate
+== 20191016061501 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0020s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0005s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0007s
+== 20191016061501 DeviseCreateUsers: migrated (0.0034s) =======================
+
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 06:18:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.4ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 06:18:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (23.6ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (136.9ms)
+Completed 500 Internal Server Error in 5869ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007fb005c583e0>:0x00007fb0064becf0>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <title>Meshiterro</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7: 
+Completed 500 Internal Server Error in 5983ms (ActiveRecord: 6.5ms)
+
+
+  
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__14112004147362859_47213131325720'
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007fb0058f0f90>:0x00007fb00649ebf8>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <title>Meshiterro</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7: 
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__14112004147362859_47213134269840'
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 06:18:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (23.5ms)
+Completed 500 Internal Server Error in 364ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007faff45da5d8>:0x00007fb005ec56c8>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <title>Meshiterro</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7: 
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__14112004147362859_70196848311520'
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 06:20:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007faff4c1f6a0>:0x00007faff47a6650>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <title>Meshiterro</title>
+    5:     <%= csp_meta_tag %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__14112004147362859_70196851497900'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 06:20:34 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 06:20:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.1ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (23.2ms)
+Completed 500 Internal Server Error in 886ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007fb2f5a9fd08>:0x00007fb2f60b8c58>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <title>Meshiterro</title>
+    5:     <%= csp_meta_tag %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___2558658143735464141_47388834118500'
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 06:24:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007fb2f57d1f40>:0x00007fb2f4e70b18>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <title>Meshiterro</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= csp_meta_tag %>
+    7: 
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2558658143735464141_70203300403100'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 06:27:50 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails g devise:views
+Running via Spring preloader in process 2421
+      invoke  Devise::Generators::SharedViewsGenerator
+      create    app/views/devise/shared
+      create    app/views/devise/shared/_error_messages.html.erb
+      create    app/views/devise/shared/_links.html.erb
+      invoke  form_for
+      create    app/views/devise/confirmations
+      create    app/views/devise/confirmations/new.html.erb
+      create    app/views/devise/passwords
+      create    app/views/devise/passwords/edit.html.erb
+      create    app/views/devise/passwords/new.html.erb
+      create    app/views/devise/registrations
+      create    app/views/devise/registrations/edit.html.erb
+      create    app/views/devise/registrations/new.html.erb
+      create    app/views/devise/sessions
+      create    app/views/devise/sessions/new.html.erb
+      create    app/views/devise/unlocks
+      create    app/views/devise/unlocks/new.html.erb
+      invoke  erb
+      create    app/views/devise/mailer
+      create    app/views/devise/mailer/confirmation_instructions.html.erb
+      create    app/views/devise/mailer/email_changed.html.erb
+      create    app/views/devise/mailer/password_change.html.erb
+      create    app/views/devise/mailer/reset_password_instructions.html.erb
+      create    app/views/devise/mailer/unlock_instructions.html.erb
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ cd /vagrant
+vagrant@ubuntu-bionic:/vagrant$ cp meshiterro_template/app/views/devise/sessions/new.html.erb meshiterro/app/views/devise/sessions/
+vagrant@ubuntu-bionic:/vagrant$ cp meshiterro_template/app/views/layouts/application.html.erb meshiterro/app/views/layouts/
+vagrant@ubuntu-bionic:/vagrant$ ^C
+vagrant@ubuntu-bionic:/vagrant$ rails s -b 0.0.0.0
+Usage:
+  rails new APP_PATH [options]
+
+Options:
+      [--skip-namespace], [--no-skip-namespace]            # Skip namespace (affects only isolated applications)
+  -r, [--ruby=PATH]                                        # Path to the Ruby binary of your choice
+                                                           # Default: /usr/bin/ruby2.5
+  -m, [--template=TEMPLATE]                                # Path to some application template (can be a filesystem path or URL)
+  -d, [--database=DATABASE]                                # Preconfigure for selected database (options: mysql/postgresql/sqlite3/oracle/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                           # Default: sqlite3
+      [--skip-yarn], [--no-skip-yarn]                      # Don't use Yarn for managing JavaScript dependencies
+      [--skip-gemfile], [--no-skip-gemfile]                # Don't create a Gemfile
+  -G, [--skip-git], [--no-skip-git]                        # Skip .gitignore file
+      [--skip-keeps], [--no-skip-keeps]                    # Skip source control .keep files
+  -M, [--skip-action-mailer], [--no-skip-action-mailer]    # Skip Action Mailer files
+  -O, [--skip-active-record], [--no-skip-active-record]    # Skip Active Record files
+      [--skip-active-storage], [--no-skip-active-storage]  # Skip Active Storage files
+  -P, [--skip-puma], [--no-skip-puma]                      # Skip Puma related files
+  -C, [--skip-action-cable], [--no-skip-action-cable]      # Skip Action Cable files
+  -S, [--skip-sprockets], [--no-skip-sprockets]            # Skip Sprockets files
+      [--skip-spring], [--no-skip-spring]                  # Don't install Spring application preloader
+      [--skip-listen], [--no-skip-listen]                  # Don't generate configuration that depends on the listen gem
+      [--skip-coffee], [--no-skip-coffee]                  # Don't use CoffeeScript
+  -J, [--skip-javascript], [--no-skip-javascript]          # Skip JavaScript files
+      [--skip-turbolinks], [--no-skip-turbolinks]          # Skip turbolinks gem
+  -T, [--skip-test], [--no-skip-test]                      # Skip test files
+      [--skip-system-test], [--no-skip-system-test]        # Skip system test files
+      [--skip-bootsnap], [--no-skip-bootsnap]              # Skip bootsnap gem
+      [--dev], [--no-dev]                                  # Setup the application with Gemfile pointing to your Rails checkout
+      [--edge], [--no-edge]                                # Setup the application with Gemfile pointing to Rails repository
+      [--rc=RC]                                            # Path to file containing extra configuration options for rails command
+      [--no-rc], [--no-no-rc]                              # Skip loading of extra configuration options from .railsrc file
+      [--api], [--no-api]                                  # Preconfigure smaller stack for API only apps
+  -B, [--skip-bundle], [--no-skip-bundle]                  # Don't run bundle install
+      [--webpack=WEBPACK]                                  # Preconfigure for app-like JavaScript with Webpack (options: react/vue/angular/elm/stimulus)
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Rails options:
+  -h, [--help], [--no-help]        # Show this help message and quit
+  -v, [--version], [--no-version]  # Show Rails version number and quit
+
+Description:
+    The 'rails new' command creates a new Rails application with a default
+    directory structure and configuration at the path you specify.
+
+    You can specify extra command-line arguments to be used every time
+    'rails new' runs in the .railsrc configuration file in your home directory.
+
+    Note that the arguments specified in the .railsrc file don't affect the
+    defaults values shown above in this help message.
+
+Example:
+    rails new ~/Code/Ruby/weblog
+
+    This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
+vagrant@ubuntu-bionic:/vagrant$ rails s -b 0.0.0.0
+Usage:
+  rails new APP_PATH [options]
+
+Options:
+      [--skip-namespace], [--no-skip-namespace]            # Skip namespace (affects only isolated applications)
+  -r, [--ruby=PATH]                                        # Path to the Ruby binary of your choice
+                                                           # Default: /usr/bin/ruby2.5
+  -m, [--template=TEMPLATE]                                # Path to some application template (can be a filesystem path or URL)
+  -d, [--database=DATABASE]                                # Preconfigure for selected database (options: mysql/postgresql/sqlite3/oracle/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                           # Default: sqlite3
+      [--skip-yarn], [--no-skip-yarn]                      # Don't use Yarn for managing JavaScript dependencies
+      [--skip-gemfile], [--no-skip-gemfile]                # Don't create a Gemfile
+  -G, [--skip-git], [--no-skip-git]                        # Skip .gitignore file
+      [--skip-keeps], [--no-skip-keeps]                    # Skip source control .keep files
+  -M, [--skip-action-mailer], [--no-skip-action-mailer]    # Skip Action Mailer files
+  -O, [--skip-active-record], [--no-skip-active-record]    # Skip Active Record files
+      [--skip-active-storage], [--no-skip-active-storage]  # Skip Active Storage files
+  -P, [--skip-puma], [--no-skip-puma]                      # Skip Puma related files
+  -C, [--skip-action-cable], [--no-skip-action-cable]      # Skip Action Cable files
+  -S, [--skip-sprockets], [--no-skip-sprockets]            # Skip Sprockets files
+      [--skip-spring], [--no-skip-spring]                  # Don't install Spring application preloader
+      [--skip-listen], [--no-skip-listen]                  # Don't generate configuration that depends on the listen gem
+      [--skip-coffee], [--no-skip-coffee]                  # Don't use CoffeeScript
+  -J, [--skip-javascript], [--no-skip-javascript]          # Skip JavaScript files
+      [--skip-turbolinks], [--no-skip-turbolinks]          # Skip turbolinks gem
+  -T, [--skip-test], [--no-skip-test]                      # Skip test files
+      [--skip-system-test], [--no-skip-system-test]        # Skip system test files
+      [--skip-bootsnap], [--no-skip-bootsnap]              # Skip bootsnap gem
+      [--dev], [--no-dev]                                  # Setup the application with Gemfile pointing to your Rails checkout
+      [--edge], [--no-edge]                                # Setup the application with Gemfile pointing to Rails repository
+      [--rc=RC]                                            # Path to file containing extra configuration options for rails command
+      [--no-rc], [--no-no-rc]                              # Skip loading of extra configuration options from .railsrc file
+      [--api], [--no-api]                                  # Preconfigure smaller stack for API only apps
+  -B, [--skip-bundle], [--no-skip-bundle]                  # Don't run bundle install
+      [--webpack=WEBPACK]                                  # Preconfigure for app-like JavaScript with Webpack (options: react/vue/angular/elm/stimulus)
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Rails options:
+  -h, [--help], [--no-help]        # Show this help message and quit
+  -v, [--version], [--no-version]  # Show Rails version number and quit
+
+Description:
+    The 'rails new' command creates a new Rails application with a default
+    directory structure and configuration at the path you specify.
+
+    You can specify extra command-line arguments to be used every time
+    'rails new' runs in the .railsrc configuration file in your home directory.
+
+    Note that the arguments specified in the .railsrc file don't affect the
+    defaults values shown above in this help message.
+
+Example:
+    rails new ~/Code/Ruby/weblog
+
+    This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
+vagrant@ubuntu-bionic:/vagrant$ cp meshiterro_template/app/views/devise/registrations/new.html.erb meshiterro/app/views/devise/registrations/
+vagrant@ubuntu-bionic:/vagrant$ rails s -b 0.0.0.0
+Usage:
+  rails new APP_PATH [options]
+
+Options:
+      [--skip-namespace], [--no-skip-namespace]            # Skip namespace (affects only isolated applications)
+  -r, [--ruby=PATH]                                        # Path to the Ruby binary of your choice
+                                                           # Default: /usr/bin/ruby2.5
+  -m, [--template=TEMPLATE]                                # Path to some application template (can be a filesystem path or URL)
+  -d, [--database=DATABASE]                                # Preconfigure for selected database (options: mysql/postgresql/sqlite3/oracle/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                           # Default: sqlite3
+      [--skip-yarn], [--no-skip-yarn]                      # Don't use Yarn for managing JavaScript dependencies
+      [--skip-gemfile], [--no-skip-gemfile]                # Don't create a Gemfile
+  -G, [--skip-git], [--no-skip-git]                        # Skip .gitignore file
+      [--skip-keeps], [--no-skip-keeps]                    # Skip source control .keep files
+  -M, [--skip-action-mailer], [--no-skip-action-mailer]    # Skip Action Mailer files
+  -O, [--skip-active-record], [--no-skip-active-record]    # Skip Active Record files
+      [--skip-active-storage], [--no-skip-active-storage]  # Skip Active Storage files
+  -P, [--skip-puma], [--no-skip-puma]                      # Skip Puma related files
+  -C, [--skip-action-cable], [--no-skip-action-cable]      # Skip Action Cable files
+  -S, [--skip-sprockets], [--no-skip-sprockets]            # Skip Sprockets files
+      [--skip-spring], [--no-skip-spring]                  # Don't install Spring application preloader
+      [--skip-listen], [--no-skip-listen]                  # Don't generate configuration that depends on the listen gem
+      [--skip-coffee], [--no-skip-coffee]                  # Don't use CoffeeScript
+  -J, [--skip-javascript], [--no-skip-javascript]          # Skip JavaScript files
+      [--skip-turbolinks], [--no-skip-turbolinks]          # Skip turbolinks gem
+  -T, [--skip-test], [--no-skip-test]                      # Skip test files
+      [--skip-system-test], [--no-skip-system-test]        # Skip system test files
+      [--skip-bootsnap], [--no-skip-bootsnap]              # Skip bootsnap gem
+      [--dev], [--no-dev]                                  # Setup the application with Gemfile pointing to your Rails checkout
+      [--edge], [--no-edge]                                # Setup the application with Gemfile pointing to Rails repository
+      [--rc=RC]                                            # Path to file containing extra configuration options for rails command
+      [--no-rc], [--no-no-rc]                              # Skip loading of extra configuration options from .railsrc file
+      [--api], [--no-api]                                  # Preconfigure smaller stack for API only apps
+  -B, [--skip-bundle], [--no-skip-bundle]                  # Don't run bundle install
+      [--webpack=WEBPACK]                                  # Preconfigure for app-like JavaScript with Webpack (options: react/vue/angular/elm/stimulus)
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Rails options:
+  -h, [--help], [--no-help]        # Show this help message and quit
+  -v, [--version], [--no-version]  # Show Rails version number and quit
+
+Description:
+    The 'rails new' command creates a new Rails application with a default
+    directory structure and configuration at the path you specify.
+
+    You can specify extra command-line arguments to be used every time
+    'rails new' runs in the .railsrc configuration file in your home directory.
+
+    Note that the arguments specified in the .railsrc file don't affect the
+    defaults values shown above in this help message.
+
+Example:
+    rails new ~/Code/Ruby/weblog
+
+    This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
+vagrant@ubuntu-bionic:/vagrant$ rails s -b 0.0.0.0
+Usage:
+  rails new APP_PATH [options]
+
+Options:
+      [--skip-namespace], [--no-skip-namespace]            # Skip namespace (affects only isolated applications)
+  -r, [--ruby=PATH]                                        # Path to the Ruby binary of your choice
+                                                           # Default: /usr/bin/ruby2.5
+  -m, [--template=TEMPLATE]                                # Path to some application template (can be a filesystem path or URL)
+  -d, [--database=DATABASE]                                # Preconfigure for selected database (options: mysql/postgresql/sqlite3/oracle/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                           # Default: sqlite3
+      [--skip-yarn], [--no-skip-yarn]                      # Don't use Yarn for managing JavaScript dependencies
+      [--skip-gemfile], [--no-skip-gemfile]                # Don't create a Gemfile
+  -G, [--skip-git], [--no-skip-git]                        # Skip .gitignore file
+      [--skip-keeps], [--no-skip-keeps]                    # Skip source control .keep files
+  -M, [--skip-action-mailer], [--no-skip-action-mailer]    # Skip Action Mailer files
+  -O, [--skip-active-record], [--no-skip-active-record]    # Skip Active Record files
+      [--skip-active-storage], [--no-skip-active-storage]  # Skip Active Storage files
+  -P, [--skip-puma], [--no-skip-puma]                      # Skip Puma related files
+  -C, [--skip-action-cable], [--no-skip-action-cable]      # Skip Action Cable files
+  -S, [--skip-sprockets], [--no-skip-sprockets]            # Skip Sprockets files
+      [--skip-spring], [--no-skip-spring]                  # Don't install Spring application preloader
+      [--skip-listen], [--no-skip-listen]                  # Don't generate configuration that depends on the listen gem
+      [--skip-coffee], [--no-skip-coffee]                  # Don't use CoffeeScript
+  -J, [--skip-javascript], [--no-skip-javascript]          # Skip JavaScript files
+      [--skip-turbolinks], [--no-skip-turbolinks]          # Skip turbolinks gem
+  -T, [--skip-test], [--no-skip-test]                      # Skip test files
+      [--skip-system-test], [--no-skip-system-test]        # Skip system test files
+      [--skip-bootsnap], [--no-skip-bootsnap]              # Skip bootsnap gem
+      [--dev], [--no-dev]                                  # Setup the application with Gemfile pointing to your Rails checkout
+      [--edge], [--no-edge]                                # Setup the application with Gemfile pointing to Rails repository
+      [--rc=RC]                                            # Path to file containing extra configuration options for rails command
+      [--no-rc], [--no-no-rc]                              # Skip loading of extra configuration options from .railsrc file
+      [--api], [--no-api]                                  # Preconfigure smaller stack for API only apps
+  -B, [--skip-bundle], [--no-skip-bundle]                  # Don't run bundle install
+      [--webpack=WEBPACK]                                  # Preconfigure for app-like JavaScript with Webpack (options: react/vue/angular/elm/stimulus)
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Rails options:
+  -h, [--help], [--no-help]        # Show this help message and quit
+  -v, [--version], [--no-version]  # Show Rails version number and quit
+
+Description:
+    The 'rails new' command creates a new Rails application with a default
+    directory structure and configuration at the path you specify.
+
+    You can specify extra command-line arguments to be used every time
+    'rails new' runs in the .railsrc configuration file in your home directory.
+
+    Note that the arguments specified in the .railsrc file don't affect the
+    defaults values shown above in this help message.
+
+Example:
+    rails new ~/Code/Ruby/weblog
+
+    This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
+vagrant@ubuntu-bionic:/vagrant$ cd meshiterro
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 07:00:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.8ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 5.8ms)
+
+
+  
+SyntaxError (/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nd=( f.text_field :name autfocs: true, class="form-control" ...
+...                        ^~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: Can't assign to true
+...text_field :name autfocs: true, class="form-control" id="inp...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: syntax error, unexpected '='
+...eld :name autfocs: true, class="form-control" id="inputName"...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...: true, class="form-control" id="inputName" placeholder:"名...
+...                             ^~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rol" id="inputName" placeholder:"名前");@output_buffer.saf...
+...                    ^~~~~~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:21: syntax error, unexpected '='
+...=( f.email_filed :email, class="form-control" id="inputEmail...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:email, class="form-control" id="inputEmail" placeholder:"...
+...                             ^~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ol" id="inputEmail" placeholder:"メールアドレス");@ou...
+...                    ^~~~~~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:26: syntax error, unexpected '='
+...rd, autocomplete: "off", class="form-control" id="inputPassw...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "off", class="form-control" id="inputPassword" placeholder:...
+...                             ^~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+... id="inputPassword" placeholder:"パスワード" );@output_...
+...                    ^~~~~~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:31: syntax error, unexpected '='
+...on, autocomplete: "off", class="form-control" id="inputConfi...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "off", class="form-control" id="inputConfirmPassword" place...
+...                             ^~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...putConfirmPassword" placeholder:"パスワード確認");@ou...
+...                    ^~~~~~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:16: Can't assign to true
+app/views/devise/registrations/new.html.erb:16: syntax error, unexpected '='
+app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:21: syntax error, unexpected '='
+app/views/devise/registrations/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:26: syntax error, unexpected '='
+app/views/devise/registrations/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected '='
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end-of-input, expecting keyword_end
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 07:01:55 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 07:02:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.4ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 5.6ms)
+
+
+  
+SyntaxError (/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nd=( f.text_field :name autfocs: true, class="form-control" ...
+...                        ^~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: Can't assign to true
+...text_field :name autfocs: true, class="form-control" id="inp...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: syntax error, unexpected '='
+...eld :name autfocs: true, class="form-control" id="inputName"...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...: true, class="form-control" id="inputName" placeholder:"名...
+...                             ^~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rol" id="inputName" placeholder:"名前");@output_buffer.saf...
+...                    ^~~~~~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:21: syntax error, unexpected '='
+...=( f.email_filed :email, class="form-control" id="inputEmail...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:email, class="form-control" id="inputEmail" placeholder:"...
+...                             ^~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ol" id="inputEmail" placeholder:"メールアドレス");@ou...
+...                    ^~~~~~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:26: syntax error, unexpected '='
+...rd, autocomplete: "off", class="form-control" id="inputPassw...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "off", class="form-control" id="inputPassword" placeholder:...
+...                             ^~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+... id="inputPassword" placeholder:"パスワード" );@output_...
+...                    ^~~~~~~~~~~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:31: syntax error, unexpected '='
+...on, autocomplete: "off", class="form-control" id="inputConfi...
+...                              ^
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "off", class="form-control" id="inputConfirmPassword" place...
+...                             ^~
+/vagrant/meshiterro/app/views/devise/registrations/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...putConfirmPassword" placeholder:"パスワード確認");@ou...
+...                    ^~~~~~~~~~~):
+  
+app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:16: Can't assign to true
+app/views/devise/registrations/new.html.erb:16: syntax error, unexpected '='
+app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:21: syntax error, unexpected '='
+app/views/devise/registrations/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:26: syntax error, unexpected '='
+app/views/devise/registrations/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected '='
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 07:08:59 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 07:09:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.2ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (207.0ms)
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `devise_error_massages!' for #<#<Class:0x000055e8e40a8e80>:0x000055e8e406cdb8>):
+    10:                     <div class="form-body">
+    11: 
+    12:                       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    13:                       <%= devise_error_massages! %>
+    14:                         <div class="form-group has-icon">
+    15:                           <label class="control-label sr-only" for="inputName">Name</label>
+    16:                           <%= f.text_field :name, autfocs: true, class:"form-control", id:"inputName", placeholder:"名前"%>
+  
+app/views/devise/registrations/new.html.erb:13:in `block in _app_views_devise_registrations_new_html_erb__4359399597121113651_47229372963160'
+app/views/devise/registrations/new.html.erb:12:in `_app_views_devise_registrations_new_html_erb__4359399597121113651_47229372963160'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 07:18:58 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 07:19:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (0.5ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (211.7ms)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `email_filed' for #<ActionView::Helpers::FormBuilder:0x000055e78e268448>):
+    18:                         </div>
+    19:                         <div class="form-group has-icon">
+    20:                           <label class="control-label sr-only" for="inputEmail">Email</label>
+    21:                           <%= f.email_filed :email, class:"form-control", id:"inputEmail", placeholder:"メールアドレス"%>
+    22:                           <span class="fa fa-envelope form-control-icon" aria-hidden="true"></span>
+    23:                         </div>
+    24:                         <div class="form-group has-icon">
+  
+app/views/devise/registrations/new.html.erb:21:in `block in _app_views_devise_registrations_new_html_erb___2395398672536196054_47226505842300'
+app/views/devise/registrations/new.html.erb:12:in `_app_views_devise_registrations_new_html_erb___2395398672536196054_47226505842300'
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 07:24:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___2395398672536196054_69813397695200 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (24.3ms)
+Completed 500 Internal Server Error in 933ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x000055e78e38a448>:0x000055e78dddcff0>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4080206353449490575_69813397586860'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 07:44:56 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails db:migrate
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 07:45:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (0.8ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__1840893809719328333_47077976993360 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 1149ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f77518ec068>:0x00007f7752126670>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1383160831025960658_47077976822360'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 07:59:22 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 07:59:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (2.1ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 07:59:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 1146ms (ActiveRecord: 8.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f5dc5b9ab48>:0x00007f5dc4ddc6c8>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2861044751774838728_47277919466880'
+Completed 500 Internal Server Error in 1249ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f5dcc1d2898>:0x00007f5dc4ae58c0>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2861044751774838728_47277919466880'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 08:02:07 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+         new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
+             user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
+     destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
+        new_user_password GET    /users/password/new(.:format)                                                            devise/passwords#new
+       edit_user_password GET    /users/password/edit(.:format)                                                           devise/passwords#edit
+            user_password PATCH  /users/password(.:format)                                                                devise/passwords#update
+                          PUT    /users/password(.:format)                                                                devise/passwords#update
+                          POST   /users/password(.:format)                                                                devise/passwords#create
+ cancel_user_registration GET    /users/cancel(.:format)                                                                  devise/registrations#cancel
+    new_user_registration GET    /users/sign_up(.:format)                                                                 devise/registrations#new
+   edit_user_registration GET    /users/edit(.:format)                                                                    devise/registrations#edit
+        user_registration PATCH  /users(.:format)                                                                         devise/registrations#update
+                          PUT    /users(.:format)                                                                         devise/registrations#update
+                          DELETE /users(.:format)                                                                         devise/registrations#destroy
+                          POST   /users(.:format)                                                                         devise/registrations#create
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ history
+    1  cd /vagrant
+    2  exit
+    3  cd /vagrant
+    4  ls
+    5  exit
+    6  cd /vagrant
+    7  rails new sample_app
+    8  cd sample_app/
+    9  rails g controller root
+   10  rails server -b 0.0.0.0
+   11  rails g model List
+   12  rails db:migrate
+   13  rails g controller todolists new
+   14  cd ~/Desktop
+   15  cd /vagrant
+   16  rails s -b 0.0.0.0
+   17  ls
+   18  cd sample
+   19  cd sample_up
+   20  cd sample_app/
+   21  rails s -b 0.0.0.0
+   22  rails s -b 0.0.0.
+   23  rails s -b 0.0.0.0
+   24  rails routes
+   25  rails s -b 0.0.0.0
+   26  sudo apt-get update
+   27  sudo apt-get -y install imagemagick libmagick++-dev
+   28  bundle install
+   29  rails g migration AddImageIdToLists image_id:string
+   30  rails db:migrate
+   31  rails s -b 0.0.0.0
+   32  cd /vagrant
+   33  rails new CARAVAN
+   34  rails g model Blog title:string category:string body:text
+   35  rails g controller blogs index show new edit
+   36  rails routes
+   37  rails db:migrate
+   38  rails routes
+   39  cd vagrant
+   40  cd /vagrant
+   41  rails new CARAVAN
+   42  rails g model Blog title:string category:string body:text
+   43  rails db:migrate
+   44  rails g controller blogs index show new edit
+   45  rails routes
+   46  cd /vagrant
+   47  rails new CARAVAN
+   48  cd CARAVAN/
+   49  rails g model Blog title:string category:string body:text
+   50  rails db:migrate
+   51  rails g controller blogs index show new edit
+   52  rails routes
+   53  rails s -b 0.0.0.0
+   54  vagrant halt
+   55  exit
+   56  cd /vagrant/CARAVAN/
+   57  rails s -b 0.0.0.0
+   58  exit
+   59  cd /vagrant
+   60  rails new Bookers
+   61  cd Bookers
+   62  rails g model book title:stling body:text
+   63  rails db:migrate
+   64  rails g controller books index show new edit
+   65  rails routes
+   66  rake routes
+   67  rails generate controller home index
+   68  rails s -b 0.0.0.0
+   69  rails generate controler  home index
+   70  views/home/index.html.erb
+   71  exit
+   72  cd /vagrant/Bookers
+   73  rails generate controller home index
+   74  rails controller home index
+   75  views/home/index.html.erb
+   76  rails generate controller home index
+   77  views/home/index.html.erb
+   78  rake routes
+   79  rails s -b 0.0.0.0
+   80  rake db:migrate
+   81  rails s -b 0.0.0.0
+   82  bandle exec rake db:migrate
+   83  rake db:migrate
+   84  bundle exec rake db:migrate
+   85  bundle update rake
+   86  rake db:migrate
+   87  rails s -b 0.0.0.0
+   88  rake db:migrate
+   89  rails g model Book title:string
+   90  rails db:migrate
+   91  rails dbconsole
+   92  ActiveRecord::Base.connection.tables
+   93  rails g migration change_data_body_to_books
+   94  rails db:migrate
+   95  rails s -b 0.0.0.0
+   96  rails routs
+   97  rails routes
+   98  rails s -b 0.0.0.0
+   99  rails routes
+  100  rails s -b 0.0.0.0
+  101  bundle install
+  102  bundle exec rspec spec/ --format documentation
+  103  rails db:migrate RAILS_ENV=test
+  104  bundle exec rspec spec/ --format documentation
+  105  bundle install
+  106  rails db:migrate RAILS_ENV=test
+  107  bundle exec rspec spec/ --format documentation
+  108  cd /vagrant/Bookers
+  109  bundle exec rspec spec/ --format documentation
+  110  rails s -b 0.0.0.0
+  111  bundle exec rspec spec/ --format documentation
+  112  rails s -b 0.0.0.0
+  113  bundle exec rspec spec/ --format documentation
+  114  rails s -b 0.0.0.0
+  115  bundle exec rspec spec/ --format documentation
+  116  rails s -b 0.0.0.0
+  117  rails routs
+  118  rails routes
+  119  rails s -b 0.0.0.0
+  120  bundle exec rspec spec/ --format documentation
+  121  rails s -b 0.0.0.0
+  122  rails routes
+  123  rails s -b 0.0.0.0
+  124  bundle exec rspec spec/ --format documentation
+  125  rails s -b 0.0.0.0
+  126  bundle exec rspec spec/ --format documentation
+  127  rails s -b 0.0.0.0
+  128  bundle exec rspec spec/ --format documentation
+  129  rails s -b 0.0.0.0
+  130  bundle exec rspec spec/ --format documentation
+  131  exit
+  132  cd /vagrant
+  133  rails new meshiterro
+  134  cd meshiterro
+  135  rails s -b 0.0.0.0
+  136  cd vagrant
+  137  cd /vagrant
+  138  pwd
+  139  cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+  140  cd /meshiterro
+  141  cd meshiterro
+  142  bundle install
+  143  rails g devise:install
+  144  rails g devise User
+  145  rails db:migrate
+  146  rails routes
+  147  rails s -b 0.0.0.0
+  148  rails g devise:views
+  149  cd vagrant
+  150  cd /vagrant
+  151  cp meshiterro_template/app/views/layouts/application.html.erb meshiterro/app/views/layouts/
+  152  cd mshiterro
+  153  cd /meshiterro
+  154  cd meshiterro
+  155  rails s -b 0.0.0.0
+  156  cp meshiterro_template/app/views/devise/registrations/new.html.erb meshiterro/app/views/devise/registrations/
+  157  rails s -b 0.0.0.0
+  158  pwd
+  159  cd /vagrant
+  160  cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+  161  cd /meshiterro
+  162  cd meshiterro
+  163  rails db:migrate
+  164  rails s -b 0.0.0.0
+  165  rails g devise:views
+  166  cd /vagrant
+  167  cp meshiterro_template/app/views/devise/sessions/new.html.erb meshiterro/app/views/devise/sessions/
+  168  cp meshiterro_template/app/views/layouts/application.html.erb meshiterro/app/views/layouts/
+  169  cd /meshiterro
+  170  cd meshiterro
+  171  rails s -b 0.0.0.0
+  172  cd /vagrant
+  173  cp meshiterro_template/app/views/devise/sessions/new.html.erb meshiterro/app/views/devise/sessions/
+  174  cp meshiterro_template/app/views/layouts/application.html.erb meshiterro/app/views/layouts/
+  175  rails new meshiterro
+  176  cd meshiterro
+  177  rails s -b 0.0.0.0
+  178  cd /vagrant
+  179  pwb
+  180  pwd
+  181  cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+  182  cd meshiterro
+  183  bundle install
+  184  rails g devise:install
+  185  rails g devise User
+  186  rails db:migrate
+  187  rails s -b 0.0.0.0
+  188  rails g devise:views
+  189  cp meshiterro_template/app/views/devise/sessions/new.html.erb meshiterro/app/views/devise/sessions/
+  190  exit
+  191  cd /vagrant
+  192  rails new meshiterro
+  193  cd meshiterro
+  194  rails s -b 0.0.0.0
+  195  cd/vagrant
+  196  cd /vagrant
+  197  cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+  198  bundle install
+  199  rails g devise User
+  200  exit
+  201  cd /vagrant
+  202  rails new meshiterro
+  203  cd meshiterro
+  204  rails s -b 0.0.0.0
+  205  cd /vagrant
+  206  cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+  207  pwd
+  208  cp -r meshiterro_template/app/assets/* meshiterro/app/assets/
+  209  cp -r meshiterro_template2/app/assets/* meshiterro/app/assets/
+  210  cp -r meshiterro_template 2/app/assets/* meshiterro/app/assets/
+  211  bundle install
+  212  cp -r meshiterro_template 2/app/assets/* meshiterro/app/assets/
+  213  bundle install
+  214  # find / -name Gemfile
+  215  find / -name Gemfile
+  216  cd meshiterro
+  217  bundle install
+  218  rails g devise:install
+  219  rails g devise User
+  220  rails db:migrate
+  221  rails s -b 0.0.0.0
+  222  rails g devise:views
+  223  cd /vagrant
+  224  cp meshiterro_template/app/views/devise/sessions/new.html.erb meshiterro/app/views/devise/sessions/
+  225  cp meshiterro_template/app/views/layouts/application.html.erb meshiterro/app/views/layouts/
+  226  rails s -b 0.0.0.0
+  227  cp meshiterro_template/app/views/devise/registrations/new.html.erb meshiterro/app/views/devise/registrations/
+  228  rails s -b 0.0.0.0
+  229  cd meshiterro
+  230  rails s -b 0.0.0.0
+  231  rails db:migrate
+  232  rails s -b 0.0.0.0
+  233  rails routes
+  234  history
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 08:18:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (0.9ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___4101263746364830419_46993606485520 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 951ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007fd64da86ff8>:0x0000557b1a64a9c0>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___2870507281737848613_46993606379900'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 08:21:49 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ cp meshiterro_template/app/views/devise/registrations/new.html.erb meshiterro/app/views/devise/registrations/
+cp: cannot stat 'meshiterro_template/app/views/devise/registrations/new.html.erb': No such file or directory
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ cd ..
+vagrant@ubuntu-bionic:/vagrant$ cp meshiterro_template/app/views/devise/registrations/new.html.erb meshiterro/app/views/devise/registrations/
+vagrant@ubuntu-bionic:/vagrant$ cd meshiterro
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 08:23:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (0.9ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__1528688395309943597_47097833110720 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 1001ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f8f09a7b468>:0x00007f8f0a1eda48>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4204145888737521408_47097832944180'
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 08:28:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__1528688395309943597_70126159535720 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f8f098717a8>:0x00007f8f08fe2718>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4204145888737521408_70126159515200'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 08:29:04 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 08:29:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.3ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 1121ms (ActiveRecord: 5.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f5915b82b38>:0x0000558ac1460c20>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__596062078805365942_47027220882880'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 08:29:20 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ spring stop
+Spring stopped.
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 08:31:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.4ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__2518759954265881268_47052077013380 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 1089ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007fc439a7fd28>:0x00007fc43a1f1c50>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 
+    6: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___362019592963591086_47052076934080'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 08:32:14 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 08:32:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.4ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__2571959186318903738_47059530274200 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 958ms (ActiveRecord: 5.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f069da7a9b8>:0x00007f069e1ecfc0>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1667626442615519503_47059530140940'
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 08:32:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f069d79d420>:0x00007f069ce112d0>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1667626442615519503_69833194645840'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 08:33:09 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ cd ..
+vagrant@ubuntu-bionic:/vagrant$ ls
+Bookers  CARAVAN  meshiterro  meshiterro_template  sample_app  ubuntu-bionic-18.04-cloudimg-console.log  Vagrantfile
+vagrant@ubuntu-bionic:/vagrant$ cd meshiterro
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 08:33:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.5ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 995ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007fca184adf00>:0x00007fca1a10d858>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___3137056046644554419_47401251555540'
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-10-16 08:33:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.6ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 364ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007fca19a8ee00>:0x00007fca18a062b8>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___3137056046644554419_70252995406060'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 08:34:22 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ exit
+logout
+Connection to 127.0.0.1 closed.
+inoueyuuginoMacBook-Pro:vagrant inoueyuugi$ vagrant halt
+==> default: Attempting graceful shutdown of VM...
+inoueyuuginoMacBook-Pro:vagrant inoueyuugi$ vagrant suspend
+inoueyuuginoMacBook-Pro:vagrant inoueyuugi$ vagrnt up
+-bash: vagrnt: command not found
+inoueyuuginoMacBook-Pro:vagrant inoueyuugi$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/bionic64' version '20191003.0.0' is up to date...
+==> default: A newer version of the box 'ubuntu/bionic64' for provider 'virtualbox' is
+==> default: available! You currently have version '20191003.0.0'. The latest is version
+==> default: '20191014.0.0'. Run `vagrant box update` to update.
+==> default: Clearing any previously set forwarded ports...
+==> default: Vagrant has detected a configuration issue which exposes a
+==> default: vulnerability with the installed version of VirtualBox. The
+==> default: current guest is configured to use an E1000 NIC type for a
+==> default: network adapter which is vulnerable in this version of VirtualBox.
+==> default: Ensure the guest is trusted to use this configuration or update
+==> default: the NIC type using one of the methods below:
+==> default: 
+==> default:   https://www.vagrantup.com/docs/virtualbox/configuration.html#default-nic-type
+==> default:   https://www.vagrantup.com/docs/virtualbox/networking.html#virtualbox-nic-type
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 3000 (guest) => 3000 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection reset. Retrying...
+    default: Warning: Remote connection disconnect. Retrying...
+==> default: Machine booted and ready!
+[default] GuestAdditions 5.2.20 running --- OK.
+==> default: Checking for guest additions in VM...
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /vagrant => /Users/inoueyuugi/Desktop/work/vagrant
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+inoueyuuginoMacBook-Pro:vagrant inoueyuugi$ vagrant ssh
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-65-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Oct 16 08:55:56 UTC 2019
+
+  System load:  1.66              Processes:             99
+  Usage of /:   19.6% of 9.63GB   Users logged in:       0
+  Memory usage: 12%               IP address for enp0s3: 10.0.2.15
+  Swap usage:   0%                IP address for enp0s8: 192.168.33.10
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+13 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Wed Oct 16 05:24:20 2019 from 10.0.2.2
+vagrant@ubuntu-bionic:~$ cd /vagrant
+vagrant@ubuntu-bionic:/vagrant$ cd meshiterro
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 08:56:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (0.8ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__536367171840812008_47386096152700 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 1003ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `csrf_meta_tags' for #<#<Class:0x00007f1d8d90cbb0>:0x00005631dec546b0>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <%= csrf_meta_tags %>
+    5: 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/assets/meshiterro_template/app/views/layouts/application.html.erb:4:in `_evaluate_template'
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1807527042877405441_47386095967720'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 08:59:45 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ cd app
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app$ cd assets
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ ls
+config  images  javascripts  meshiterro_template  stylesheets
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ rm meshiterro_template
+rm: cannot remove 'meshiterro_template': Is a directory
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ rm meshiterro_template
+rm: cannot remove 'meshiterro_template': Is a directory
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ rm meshiterro_template
+rm: cannot remove 'meshiterro_template': Is a directory
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ ls
+config  images  javascripts  meshiterro_template  stylesheets
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ rm meshiterro_template
+rm: cannot remove 'meshiterro_template': Is a directory
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ ls
+config  images  javascripts  meshiterro_template  stylesheets
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ rm -r -f  meshiterro_template
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ ls
+config  images  javascripts  stylesheets
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ cd meshiterro
+-bash: cd: meshiterro: No such file or directory
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ cd meshiterro
+-bash: cd: meshiterro: No such file or directory
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ cd ...
+-bash: cd: ...: No such file or directory
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app/assets$ cd ..
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app$ cd..
+cd..: command not found
+vagrant@ubuntu-bionic:/vagrant/meshiterro/app$ cd ..
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 09:05:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.6ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___1820810283781606564_47095487688740 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 09:05:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___1820810283781606564_69879202904440 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2430ms (Views: 2403.0ms | ActiveRecord: 4.7ms)
+
+
+Completed 200 OK in 241ms (Views: 239.6ms | ActiveRecord: 0.0ms)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 09:13:31 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 09:13:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.5ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `devise_parameter_sanitizers' for #<Devise::RegistrationsController:0x0000557b246b1fa8>):
+  
+app/controllers/application_controller.rb:6:in `configure_permitted_parameters'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 09:14:59 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 09:15:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.7ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__685465074802349514_47424085545100 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 887ms (Views: 858.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 09:17:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__685465074802349514_70357313328880 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 233ms (Views: 232.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-10-16 09:18:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4DllmYleknL8oEP5ZWaxyfW4WMkV4unjwaypjLo1lAWpMIxC2anpECz2tgnIEGpTrGSPedcUwIDQ/oJzQwmw1Q==", "user"=>{"name"=>"井上勇義", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"サインアップ"}
+   (0.0ms)  begin transaction
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+   (0.0ms)  rollback transaction
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__685465074802349514_70357313668860 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 261ms (Views: 217.0ms | ActiveRecord: 0.1ms)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 09:20:04 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails s -b 0.0.0.0
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.5.5-p157), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-10-16 09:20:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (1.5ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___3555686024449312975_47020546028400 at /vagrant/meshiterro/app/views/devise/registrations/new.html.erb:13)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 898ms (Views: 868.0ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-10-16 09:20:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t6Fk4wIcCuuk0Nxem1/A/jZcKfexUbNY4SegPqE9ymT+qI04UutxiXSGKa42KRtkb4D+R3OnmjvwdYvBWAHutA==", "user"=>{"name"=>"井上勇義", "email"=>"yugi090708@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"サインアップ"}
+   (0.1ms)  begin transaction
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  User Exists (1.3ms)  SELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?  [["email", "yugi090708@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  User Create (2.8ms)  INSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "yugi090708@gmail.com"], ["encrypted_password", "$2a$11$hYm16n8W9pxTNSD46BNtNuzYXVm573UUslRt2zs1Tg9Lma.QrIIvK"], ["name", "井上勇義"], ["created_at", "2019-10-16 09:20:29.779294"], ["updated_at", "2019-10-16 09:20:29.779294"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+   (1.8ms)  commit transaction
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+   (0.1ms)  begin transaction
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  User Update (1.9ms)  UPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["sign_in_count", 1], ["current_sign_in_at", "2019-10-16 09:20:29.795401"], ["last_sign_in_at", "2019-10-16 09:20:29.795401"], ["current_sign_in_ip", "10.0.2.2"], ["last_sign_in_ip", "10.0.2.2"], ["updated_at", "2019-10-16 09:20:29.796269"], ["id", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+   (1.7ms)  commit transaction
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 173ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-10-16 09:20:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2019-10-16 09:40:39 +0000 ===
+- Goodbye!
+Exiting
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ bundle install
+Following files may not be writable, so sudo is needed:
+  /usr/local/bin
+  /var/lib/gems/2.5.0
+  /var/lib/gems/2.5.0/build_info
+  /var/lib/gems/2.5.0/cache
+  /var/lib/gems/2.5.0/doc
+  /var/lib/gems/2.5.0/extensions
+  /var/lib/gems/2.5.0/gems
+  /var/lib/gems/2.5.0/specifications
+Fetching https://github.com/manfe/refile.git
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/............
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 13.0.0
+Using concurrent-ruby 1.1.5
+Using i18n 1.7.0
+Using minitest 5.12.2
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.3
+Using builder 3.2.3
+Using erubi 1.9.0
+Using mini_portile2 2.4.0
+Using nokogiri 1.10.4
+Using rails-dom-testing 2.0.3
+Using crass 1.0.5
+Using loofah 2.3.0
+Using rails-html-sanitizer 1.3.0
+Using actionview 5.2.3
+Using rack 2.0.7
+Using rack-test 1.1.0
+Using actionpack 5.2.3
+Using nio4r 2.5.2
+Using websocket-extensions 0.1.4
+Using websocket-driver 0.7.1
+Using actioncable 5.2.3
+Using globalid 0.4.2
+Using activejob 5.2.3
+Using mini_mime 1.0.2
+Using mail 2.7.1
+Using actionmailer 5.2.3
+Using activemodel 5.2.3
+Using arel 9.0.0
+Using activerecord 5.2.3
+Using mimemagic 0.3.3
+Using marcel 0.3.3
+Using activestorage 5.2.3
+Using public_suffix 4.0.1
+Using addressable 2.7.0
+Using io-like 0.3.0
+Using archive-zip 0.12.0
+Using bcrypt 3.1.13
+Using bindex 0.8.1
+Using msgpack 1.3.1
+Using bootsnap 1.4.5
+Using bundler 2.0.2
+Using byebug 11.0.1
+Using regexp_parser 1.6.0
+Using xpath 3.2.0
+Using capybara 3.29.0
+Using childprocess 3.0.0
+Using chromedriver-helper 2.1.1
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using coffee-script 2.4.1
+Using method_source 0.9.2
+Using thor 0.20.3
+Using railties 5.2.3
+Using coffee-rails 4.2.2
+Using orm_adapter 0.5.0
+Using responders 3.0.0
+Using warden 1.2.8
+Using devise 4.7.1
+Using unf_ext 0.0.7.6
+Using unf 0.1.4
+Using domain_name 0.5.20190701
+Using ffi 1.11.1
+Using http-accept 1.7.0
+Using http-cookie 1.0.3
+Using jbuilder 2.9.1
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.10.0
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Fetching mime-types-data 3.2019.1009
+Installing mime-types-data 3.2019.1009
+Using mime-types 3.3
+Using mini_magick 4.9.5
+Using mustermann 1.0.3
+Using netrc 0.11.0
+Using puma 3.12.1
+Using rack-protection 2.0.7
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.3
+Using rest-client 2.1.0
+Using tilt 2.0.10
+Using sinatra 2.0.7
+Using refile 0.6.2 from https://github.com/manfe/refile.git (at master@46b4178)
+Using refile-mini_magick 0.2.0
+Using rubyzip 2.0.0
+Using sass-listen 4.0.0
+Using sass 3.7.4
+Using sass-rails 5.1.0
+Using selenium-webdriver 3.142.6
+Using spring 2.1.0
+Using spring-watcher-listen 2.0.1
+Using sqlite3 1.4.1
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.1
+Using uglifier 4.2.0
+Using web-console 3.7.0
+Bundle complete! 21 Gemfile dependencies, 98 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails g model PostImage shop_name:text image_id:text caption:text user_id:integer
+Running via Spring preloader in process 2272
+      invoke  active_record
+      create    db/migrate/20191016094355_create_post_images.rb
+      create    app/models/post_image.rb
+      invoke    test_unit
+      create      test/models/post_image_test.rb
+      create      test/fixtures/post_images.yml
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails db:migrate
+== 20191016094355 CreatePostImages: migrating =================================
+-- create_table(:post_images)
+   -> 0.0034s
+== 20191016094355 CreatePostImages: migrated (0.0048s) ========================
+
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails g controller PostImages
+Running via Spring preloader in process 2294
+      create  app/controllers/post_images_controller.rb
+      invoke  erb
+      create    app/views/post_images
+      invoke  test_unit
+      create    test/controllers/post_images_controller_test.rb
+      invoke  helper
+      create    app/helpers/post_images_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/post_images.coffee
+      invoke    scss
+      create      app/assets/stylesheets/post_images.scss
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ rails routes
+rails aborted!
+ArgumentError: can't use new outside resource(s) scope
+/var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/mapper.rb:1524:in `new'
+/vagrant/meshiterro/config/routes.rb:4:in `block in <top (required)>'
+/var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+/var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+/var/lib/gems/2.5.0/gems/actionpack-5.2.3/lib/action_dispatch/routing/route_set.rb:414:in `draw'
+/vagrant/meshiterro/config/routes.rb:1:in `<top (required)>'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:54:in `load'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:54:in `load'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:285:in `block in load'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:285:in `load'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application/routes_reloader.rb:41:in `each'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application/routes_reloader.rb:41:in `load_paths'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application/routes_reloader.rb:20:in `reload!'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application/routes_reloader.rb:30:in `block in updater'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/file_update_checker.rb:83:in `execute'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application/routes_reloader.rb:10:in `execute'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application/finisher.rb:130:in `block in <module:Finisher>'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/initializable.rb:32:in `instance_exec'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/initializable.rb:32:in `run'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/initializable.rb:61:in `block in run_initializers'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/initializable.rb:60:in `run_initializers'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application.rb:361:in `initialize!'
+/vagrant/meshiterro/config/environment.rb:5:in `<top (required)>'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `block in require'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application.rb:337:in `require_environment!'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/commands/rake/rake_command.rb:23:in `block in perform'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/commands/rake/rake_command.rb:20:in `perform'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/command.rb:48:in `invoke'
+/var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/commands.rb:18:in `<top (required)>'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `block in require_with_bootsnap_lfi'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require_with_bootsnap_lfi'
+/var/lib/gems/2.5.0/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `block in require'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/lib/gems/2.5.0/gems/activesupport-5.2.3/lib/active_support/dependencies.rb:291:in `require'
+/vagrant/meshiterro/bin/rails:9:in `<top (required)>'
+/var/lib/gems/2.5.0/gems/spring-2.1.0/lib/spring/client/rails.rb:28:in `load'
+/var/lib/gems/2.5.0/gems/spring-2.1.0/lib/spring/client/rails.rb:28:in `call'
+/var/lib/gems/2.5.0/gems/spring-2.1.0/lib/spring/client/command.rb:7:in `call'
+/var/lib/gems/2.5.0/gems/spring-2.1.0/lib/spring/client.rb:30:in `run'
+/var/lib/gems/2.5.0/gems/spring-2.1.0/bin/spring:49:in `<top (required)>'
+/var/lib/gems/2.5.0/gems/spring-2.1.0/lib/spring/binstub.rb:11:in `load'
+/var/lib/gems/2.5.0/gems/spring-2.1.0/lib/spring/binstub.rb:11:in `<top (required)>'
+/vagrant/meshiterro/bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Tasks: TOP => routes => environment
+(See full trace by running task with --trace)
+vagrant@ubuntu-bionic:/vagrant/meshiterro$ 
